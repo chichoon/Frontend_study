@@ -1,5 +1,8 @@
 # Boot_Frontend
-Boot4Dim (Engineering Club for Konkuk Univ.) Frontend study results
+Boot4Dim Frontend study results
 
 ## What this study uses
 HTML5, CSS, JS
+
+## Study Goal
+To establish personal web page
