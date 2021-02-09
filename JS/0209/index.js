@@ -48,17 +48,17 @@ const chichoon = {
     quote : "byebye",
     babo : true, //boolean
     height : 164.5, //float
-    food : ["choco", "mintchoco", "sushi"], //object 안의 list
+    food : ["choco", "mintchoco", "sushi"], //object 안의 Array
     game : [
         {
             name : "rainworld", 
             fun : true
-        }, //Object나 list의 구분자 콤마 잊지말기
+        }, //Object나 Array의 구분자 콤마 잊지말기
         {
             name : "LoL", 
             fun : false
         }
-    ]//list 안의 object
+    ]//Array 안의 object
 }
 //Object 선언
 
@@ -66,5 +66,5 @@ console.log(chichoon.name)
 //chichoon Object의 name 라벨에 해당하는 값에 접근
 
 console.log(chichoon.game[0].name)
-//chichoon object의 game 라벨에 해당하는 리스트 
+//chichoon object의 game 라벨에 해당하는 Array의
 //첫번째 값의 name 라벨에 해당하는 값에 접근
