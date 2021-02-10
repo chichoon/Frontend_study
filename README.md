@@ -11,3 +11,6 @@ To establish personal web page
 - [x] ~ 0130
     - first use of HTML5 and CSS3
     - apply css style to html5
+- [ ] 0208 ~ 0220
+    - Nomad code VanillaJS Challenge
+    - **not uploading challenge assignments code!**
