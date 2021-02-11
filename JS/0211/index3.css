@@ -1,0 +1,17 @@
+body{
+    background-color: #ecf0f1;
+}
+
+h1{
+    color: #124c86;
+    transition: color .5s ease-in-out;
+    /*색이 바뀌는 애니메이션 추가 (5초동안 페이드인아웃)*/
+}
+
+.clicked{
+    color: #1c8bf1;
+}
+
+.btn{
+    cursor: pointer;
+}
