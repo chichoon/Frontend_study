@@ -1,8 +1,26 @@
+body {
+    background-color: #ecf0f1;
+}
+  
+.btn {
+    cursor: pointer;
+}
+
+body {
+    color: #34495e;
+}
+  
+.clicked {
+    color: #7f8c8d;
+}
+
 .form,
 .greetings { /*form class와 greetings class에 동시적용*/
     display : none;
+    /*display 숨기기*/
 }
 
 .showing {
-    display : black;
+    display : block;
+    /*display 보이기*/
 }
