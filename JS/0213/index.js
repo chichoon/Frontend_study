@@ -6,13 +6,22 @@ const form = document.querySelector(".js-form"),
 const USER_LS = "currentUser", //local storage 위치명
     SHOWING_CN = "showing"; //css 클래스명
 
-function handleSubmit(event){
+function saveName(text){ //local storage에 사용자명 (form에서 받은 input) 을 저장하기 위한 함수
+    localStorage.setItem(USER_LS, text);
+    //local storage에 위치한 currentUser라는 보관함에 text 저장
+}
+
+
+function handleSubmit(event){ //form 값을 화면에 띄우기 위한 함수
     event.preventDefault();
     //해당 이벤트 (submit)의 default Behavior인 텍스트 날려먹기를 방지
     //이 메소드를 등록함으로써 form에 적어서 엔터 쳐도 텍스트가 증발 안 함
     const currentValue = input.value;
     //form에 저장된 값을 currentValue에 대입
     paintGreeting(currentValue);
+    //currentValue를 화면상에 text로 출력하는 함수
+    saveName(currentValue);
+    //currentValue를 local storage에 저장하여 나중에 쓸 수 있도록 하는 함수
 }
 
 function askForName(){
