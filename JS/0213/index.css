@@ -1,0 +1,8 @@
+.form,
+.greetings { /*form class와 greetings class에 동시적용*/
+    display : none;
+}
+
+.showing {
+    display : black;
+}
