@@ -11,7 +11,6 @@ function saveName(text){ //local storage에 사용자명 (form에서 받은 inpu
     //local storage에 위치한 currentUser라는 보관함에 text 저장
 }
 
-
 function handleSubmit(event){ //form 값을 화면에 띄우기 위한 함수
     event.preventDefault();
     //해당 이벤트 (submit)의 default Behavior인 텍스트 날려먹기를 방지
