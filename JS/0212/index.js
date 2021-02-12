@@ -13,8 +13,9 @@ function getTime(){
     //현재시간에서 시를 불러오는 함수
     const seconds = date.getSeconds();
     //현재시간에서 초를 불러오는 함수
-    clockTitle.innerText =`${hours}:${minutes}:${seconds}`;
-    //html의 clocktitle string에 현재 시간과 분 표시
+    clockTitle.innerText =`${hours < 10 ? `0${hours}` : hours}:${minutes < 10 ? `0${minutes}` : minutes}:${seconds < 10 ? `0${seconds}` : seconds}`;
+    //html의 clocktitle string에 현재 시간과 분, 초 표시
+    //삼항연산자 (? :) 을 이용해서 시분초가 한자리 수 일 경우 앞에 0 출력 
 }
 
 function init(){
