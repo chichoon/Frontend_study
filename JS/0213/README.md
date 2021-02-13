@@ -10,7 +10,7 @@
     - **localStorage.getItem(스토리지명))** 으로 로컬 스토리이제어 요소 불러오기
 - **event.preventDefault()** 메소드를 이용해서 이벤트의 default execution 실행을 막을 수 있다 (해당 이벤트 발생 시에 기본적으로 일어나는 일을 막을 수 있음)
 
-##### 복잡한 querySelector
+#### 복잡한 querySelector
 - document.querySelector(`상위속성 하위속성 하위속성2... 하위속성n[값="값"]`);
     - 예시
     - document.querySelector(`select option[value=${userCountry}]`);
