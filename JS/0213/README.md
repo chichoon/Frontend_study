@@ -12,8 +12,7 @@
 
 #### 복잡한 querySelector
 - document.querySelector(`상위속성 하위속성 하위속성2... 하위속성n[값="값"]`);
-    - 예시
-    - document.querySelector(`select option[value=${userCountry}]`);
+    - 예시 : document.querySelector(`select option[value=${userCountry}]`);
     - 여기서 **option**은 HTML 내에서 **select**의 하위 항목
     - **option** 내의 value=userCountry 인 값을 검색해서 return
     - querySelector 내의 내용은 string 형식으로 들어가기 때문에 `` 과 ${} 를 이용해서 변수값을 넣어줌
