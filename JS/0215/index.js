@@ -22,14 +22,14 @@ function deleteToDo(event){ //버튼을 누르면 해당 todo가 사라지게 �
     toDoList.removeChild(li);
     //해당 항목 리스트 내에서 삭제하기
     const cleanToDos = toDos.filter(function(toDo){
-    //todo array에서 값을 필터링 할 필터를 정의
-    //filter는 array 내의 object들을 돌며 filterFunc에서 정의된 조건을
-    //만족하는 요소를 return 함
-    return toDo.id !== parseInt(li.id);
-    //특정 id (클릭한 버튼에 해당하는 li의 id) 가진 object를 제외한
-    //나머지 object들을 array에 출력하는 필터링
-    //이때 li.id는 string이기 때문에 parseInt를 이용해서 integer로 변환
-    })
+        //todo array에서 값을 필터링 할 필터를 정의
+        //filter는 array 내의 object들을 돌며 filterFunc에서 정의된 조건을
+        //만족하는 요소를 return 함
+        return toDo.id !== parseInt(li.id);
+        //특정 id (클릭한 버튼에 해당하는 li의 id) 가진 object를 제외한
+        //나머지 object들을 array에 출력하는 필터링
+        //이때 li.id는 string이기 때문에 parseInt를 이용해서 integer로 변환
+    });
     toDos = cleanToDos;
     //필터링된 array를 전역array인 todos에 저장
     //이때 const로 선언하면 값을 변경할 수 없으므로 todos는 let으로 선언
@@ -116,8 +116,7 @@ function loadToDos(){ //로컬에서 todo 불러와 보여주는 함수
             //argument로 사용하여 한번씩 실행됨
             paintToDo(toDo.text);
             //parsedToDos 내의 todo object들에서 text를 가져와 paint 함수를 실행시킨다
-        })
-
+        });
     }
 }
 
