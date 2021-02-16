@@ -28,3 +28,8 @@
 - 따라서 **JSON.stringify**, **JSON.parse** 등의 tool을 써야 됨
 - **array.forEach(함수)** 는 array 내의 모든 원소에 대하여 함수를 수행한다
     - array 내의 원소들을 각각 함수의 argument로 받아옴
+
+## 3.6
+- **Array.filter(함수)** 는 array 내의 원소들을 필터링할 수 있음
+    - argument로 받아오는 함수에 정의된 조건을 만족시키는 원소들을 return 함
+    - 예를 들어, id가 1인 object를 return하라고 조건을 제시하는 함수를 argument로 넣었을 경우 array.filter를 거치면 id가 1인 object들만이 들어있는 array를 얻을 수 있다

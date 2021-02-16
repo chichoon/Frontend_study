@@ -6,9 +6,32 @@ const toDoForm = document.querySelector('.js-toDoForm'),
 
 const TODOS_LS = 'toDos'
 //todo 항목들이 저장된 storage 이름
-const toDos = [];
+let toDos = [];
 //todo 항목들은 개수가 많기 때문에, 한번에 저장하려면 array 형식을 이용해야 좋다
 //todo를 입력할 때마다 해당 배열에 추가되도록 하자
+
+function deleteToDo(event){ //버튼을 누르면 해당 todo가 사라지게 하는 함수
+    const btn = event.target;
+    //클릭해준 버튼 받아오기
+    const li = btn.parentNode;
+    //해당 버튼의 부모가 되는 리스트 항목 받아오기
+    toDoList.removeChild(li);
+    //해당 항목 리스트 내에서 삭제하기
+    const cleanToDos = toDos.filter(function(toDo){
+    //todo array에서 값을 필터링 할 필터를 정의
+    //filter는 array 내의 object들을 돌며 filterFunc에서 정의된 조건을
+    //만족하는 요소를 return 함
+    return toDo.id !== parseInt(li.id);
+    //특정 id (클릭한 버튼에 해당하는 li의 id) 가진 object를 제외한
+    //나머지 object들을 array에 출력하는 필터링
+    //이때 li.id는 string이기 때문에 parseInt를 이용해서 integer로 변환
+    })
+    toDos = cleanToDos;
+    //필터링된 array를 전역array인 todos에 저장
+    //이때 const로 선언하면 값을 변경할 수 없으므로 todos는 let으로 선언
+    saveToDos();
+    //변경된 todo array를 저장
+}
 
 function saveToDos(){ //로컬에 할일리스트를 저장하는 함수
     localStorage.setItem(TODOS_LS, JSON.stringify(toDos));
@@ -34,6 +57,8 @@ function paintToDo(text){ //입력받은 todo 요소들을 list로 보여주기 
     //함수 및 코드 내에서 변수들은 함수 위쪽에 적고 다른 행동들은 밑에 적는게 좋다
     delBtn.innerText = "❌";
     //button 위의 text 변경
+    delBtn.addEventListener("click", deleteToDo);
+    //버튼을 클릭할 때 deleteTodo 함수가 실행되도록 이벤트 리스너 설정
     span.innerText = text;
     //span에 적힌 text 변경
     li.appendChild(span);
