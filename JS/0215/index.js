@@ -10,6 +10,14 @@ const toDos = [];
 //todo 항목들은 개수가 많기 때문에, 한번에 저장하려면 array 형식을 이용해야 좋다
 //todo를 입력할 때마다 해당 배열에 추가되도록 하자
 
+function saveToDos(){ //로컬에 할일리스트를 저장하는 함수
+    localStorage.setItem(TODOS_LS, JSON.stringify(toDos));
+    //local storage에 todos array를 저장
+    //array채로 저장하는 이유는 여러개의 항목을 한번에 저장하기 위함
+    //JSON.stringify는 Javascript object를 string으로 변환해줌
+    //자바스크립트는 로컬 스토리지에 값을 저장할 때 string으로 맘대로 변환하기 때문
+}
+
 function paintToDo(text){ //입력받은 todo 요소들을 list로 보여주기 위한 함수
     const li = document.createElement("li");
     //querySelector은 이미 존재하는 요소를 class명 등을 이용해서 가져왔다면,
@@ -17,11 +25,15 @@ function paintToDo(text){ //입력받은 todo 요소들을 list로 보여주기 
     //위의 예시는 li 속성의 요소를 추가하기 위함 (list 내의 내용물)
     const delBtn = document.createElement("button");
     //button 속성의 요소 추가 (리스트 항목 삭제용)
-    delBtn.innerText = "❌";
-    //button 위의 text 변경
     const span = document.createElement("span");
     //span 속성의 요소 추가
     //span : 라인 (줄) 안에 값을 담는 container (div는 블록 container)
+    const newID = toDos.length + 1;
+    //array에 추가할 obj의 id를 정의
+    //id는 local에 값을 저장할 때 도움을 주도록 함
+    //함수 및 코드 내에서 변수들은 함수 위쪽에 적고 다른 행동들은 밑에 적는게 좋다
+    delBtn.innerText = "❌";
+    //button 위의 text 변경
     span.innerText = text;
     //span에 적힌 text 변경
     li.appendChild(span);
@@ -29,6 +41,8 @@ function paintToDo(text){ //입력받은 todo 요소들을 list로 보여주기 
     //list의 자녀 요소로 span과 delbtn을 추가
     //list 항목마다 span과 delbtn이 나란히 표시되도록 집어넣어줌
     //둘의 순서를 바꾸면 버튼이 먼저 나오고 뒤에 text가 나온다
+    li.id = newID;
+    //list 항목에 ID를 부여 (삭제하기 쉽도록)
     toDoList.appendChild(li);
     //toDoList에 자녀 요소로 li 추가
     //리스트 내에 항목을 추가
@@ -36,13 +50,16 @@ function paintToDo(text){ //입력받은 todo 요소들을 list로 보여주기 
         //todo Obj는 todo text와 id를 담은 object
         //각 obj마다 form에서 입력받은 text와 id가 저장됨
         text : text,
-        id : toDos.length + 1
+        id : newID
         //toDos.length는 현재 array의 길이로, 원소가 아무것도 없으면 0
         //요소가 추가될 때마다 length (개수)가 늘어나며, 
         //결국 obj에서 id는 리스트에 몇번째로 저장되었는가를 의미
     }
     toDos.push(toDoObj);
     //todo array에 todo object를 하나 넣어줌
+    saveToDos();
+    //todo array에 값을 집어넣은 뒤에 savetodos를 호출함으로써
+    //방금 집어넣은 값을 local에 저장
 }
 
 function handleSubmit(event){ //todo form에 항목 입력하면 저장하는 함수
@@ -63,6 +80,16 @@ function loadToDos(){ //로컬에서 todo 불러와 보여주는 함수
         //form과 toDolist는 항상 보여지기 때문에,
         //todo list에 값이 없어도 진행할 동작이 없다
         //따라서 todo list에 값이 있을 때만 그에 따른 동작 수행
+        const parsedToDos = JSON.parse(loadedtoDos);
+        //local에 저장하기 위해 string으로 저장했던 JS Object들을 다시 object로 복원
+        parsedToDos.forEach(function(toDo){
+            //parsedToDos라는 array 내의 각 원소를 argument로 하여 함수를 한번씩 전부 실행함
+            //여기서 toDo는 parsedToDos 내에 담긴 각각의 원소 (object)임
+            //따라서 이 함수는 array 내의 모든 원소를 하나씩 받아와 
+            //argument로 사용하여 한번씩 실행됨
+            paintToDo(toDo.text);
+            //parsedToDos 내의 todo object들에서 text를 가져와 paint 함수를 실행시킨다
+        })
 
     }
 }

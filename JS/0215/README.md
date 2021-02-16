@@ -6,6 +6,7 @@
     2. **handleToDos** : todo 입력폼에 값을 입력하면 실행되는 이벤트 함수
         - 실질적인 역할 : Default로 실행되는 event를 실행되지 않게 막고, 입력받은 값을 밑의 paintToDo에 넘겨줌
     3. **paintToDo** : 입력 폼에서 입력받은 값을 list화 하여 화면에 show하는 함수
+    4. **saveToDos** : todo 항목들을 로컬 스토리지에 저장
 - JS에서 html 요소 건드리기
     - **document.querySelector** : html에 이미 존재하는 요소를 가지고 옴
     - **document.createElement** : html에 새로운 요소를 추가함
@@ -21,3 +22,9 @@
     - 예를 들면 li.appendChild는 list의 항목으로 보여질 자녀 요소들을 추가
     - ul.appendChild(li)는 리스트 내의 항목으로 li들을 추가
     - 컨테이너 안에 물건을 담는다고 생각하면 된다
+   
+## 3.5
+- 자바스크립트에서 LocalStorage에 접근할 땐, 값을 모두 string으로 저장하기 때문에 (boolean, int 등등... 다 string이 됨) Object 등을 저장하고 뺄 수 없다
+- 따라서 **JSON.stringify**, **JSON.parse** 등의 tool을 써야 됨
+- **array.forEach(함수)** 는 array 내의 모든 원소에 대하여 함수를 수행한다
+    - array 내의 원소들을 각각 함수의 argument로 받아옴
