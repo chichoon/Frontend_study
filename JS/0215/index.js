@@ -18,7 +18,7 @@ function handleSubmit(event){ //todo form에 항목 입력하면 저장하는 �
     const currentValue = toDoInput.value;
     //현재 입력창에 적힌 값을 current value 변수에 넣음
     paintToDo(currentValue);
-    //
+    //입력받은 값을 다루는 함수
 }
 
 function loadToDos(){ //로컬에서 todo 불러와 보여주는 함수
