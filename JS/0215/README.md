@@ -2,13 +2,13 @@
 
 ## 3.4
 - 함수 제작 순서
-    - 1 **loadToDos** : local에 저장된 todo 불러오기
-    - 2 **handleToDos** : todo 입력폼에 값을 입력하면 실행되는 이벤트 함수
+    1. **loadToDos** : local에 저장된 todo 불러오기
+    2. **handleToDos** : todo 입력폼에 값을 입력하면 실행되는 이벤트 함수
         - 실질적인 역할 : Default로 실행되는 event를 실행되지 않게 막고, 입력받은 값을 밑의 paintToDo에 넘겨줌
-    - 3 **paintToDo** : 입력 폼에서 입력받은 값을 list화 하여 화면에 show하는 함수
-  
-- **document.querySelector** : html에 이미 존재하는 요소를 가지고 옴
-- **document.createElement** : html에 새로운 요소를 추가함
+    3. **paintToDo** : 입력 폼에서 입력받은 값을 list화 하여 화면에 show하는 함수
+- JS에서 html 요소 건드리기
+    - **document.querySelector** : html에 이미 존재하는 요소를 가지고 옴
+    - **document.createElement** : html에 새로운 요소를 추가함
 - ol과 ul, li
     - **ol**은 순서가 있는 리스트 (ordered list)
     - **ul**은 순서가 없는 리스트 (unordered list)
