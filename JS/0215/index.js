@@ -9,6 +9,10 @@ const TODOS_LS = 'toDos'
 let toDos = [];
 //todo 항목들은 개수가 많기 때문에, 한번에 저장하려면 array 형식을 이용해야 좋다
 //todo를 입력할 때마다 해당 배열에 추가되도록 하자
+let newID = 0;
+//전역변수로 newID를 선언하면, Initialize 함수 실행 시에 기존에 저장된 값들을
+//화면상에 paint하는 과정에서 index가 늘어나기 때문에,
+//이 뒤에 무엇을 추가해도 겹칠 일이 없음
 
 function deleteToDo(event){ //버튼을 누르면 해당 todo가 사라지게 하는 함수
     const btn = event.target;
@@ -51,10 +55,6 @@ function paintToDo(text){ //입력받은 todo 요소들을 list로 보여주기 
     const span = document.createElement("span");
     //span 속성의 요소 추가
     //span : 라인 (줄) 안에 값을 담는 container (div는 블록 container)
-    const newID = toDos.length + 1;
-    //array에 추가할 obj의 id를 정의
-    //id는 local에 값을 저장할 때 도움을 주도록 함
-    //함수 및 코드 내에서 변수들은 함수 위쪽에 적고 다른 행동들은 밑에 적는게 좋다
     delBtn.innerText = "❌";
     //button 위의 text 변경
     delBtn.addEventListener("click", deleteToDo);
@@ -75,16 +75,18 @@ function paintToDo(text){ //입력받은 todo 요소들을 list로 보여주기 
         //todo Obj는 todo text와 id를 담은 object
         //각 obj마다 form에서 입력받은 text와 id가 저장됨
         text : text,
-        id : newID
-        //toDos.length는 현재 array의 길이로, 원소가 아무것도 없으면 0
-        //요소가 추가될 때마다 length (개수)가 늘어나며, 
-        //결국 obj에서 id는 리스트에 몇번째로 저장되었는가를 의미
+        id : newID    
+        //array에 추가할 obj의 id를 정의
+        //id는 local에 값을 저장할 때 도움을 주도록 함
+        //함수 및 코드 내에서 변수들은 함수 위쪽에 적고 다른 행동들은 밑에 적는게 좋다
     }
     toDos.push(toDoObj);
     //todo array에 todo object를 하나 넣어줌
     saveToDos();
     //todo array에 값을 집어넣은 뒤에 savetodos를 호출함으로써
     //방금 집어넣은 값을 local에 저장
+    newID++;
+    //ID index가 겹치지 않게 증가시킴
 }
 
 function handleSubmit(event){ //todo form에 항목 입력하면 저장하는 함수
