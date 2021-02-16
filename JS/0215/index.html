@@ -17,8 +17,16 @@
         <h4 class = "js-greetings greetings">
             <!--js-greetings는 JS용, greetings는 css용-->
         </h4>
-        <script src="index.js"></script>
+        <form class="js-toDoForm">
+            <input type="text" placeholder="New Todo here"/>
+            <!--JS용 todo form : 새로운 todo 항목을 입력할 때-->
+        </form>
+        <ul class="js-toDoList">
+            <!--JS용 todo List : 입력받은 todo list를 저장할 때-->
+        </ul>
+        <script src="greetings.js"></script>
         <script src="clock.js"></script>
+        <script src="index.js"></script>
         <!--js 두개를 불러왔기 때문에 각각의 위젯이 한 html 내에서 같이 실행된다-->
     </body>
 </html>
