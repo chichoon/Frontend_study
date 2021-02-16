@@ -6,6 +6,9 @@ const toDoForm = document.querySelector('.js-toDoForm'),
 
 const TODOS_LS = 'toDos'
 //todo 항목들이 저장된 storage 이름
+const toDos = [];
+//todo 항목들은 개수가 많기 때문에, 한번에 저장하려면 array 형식을 이용해야 좋다
+//todo를 입력할 때마다 해당 배열에 추가되도록 하자
 
 function paintToDo(text){ //입력받은 todo 요소들을 list로 보여주기 위한 함수
     const li = document.createElement("li");
@@ -29,8 +32,18 @@ function paintToDo(text){ //입력받은 todo 요소들을 list로 보여주기 
     toDoList.appendChild(li);
     //toDoList에 자녀 요소로 li 추가
     //리스트 내에 항목을 추가
+    const toDoObj = {
+        //todo Obj는 todo text와 id를 담은 object
+        //각 obj마다 form에서 입력받은 text와 id가 저장됨
+        text : text,
+        id : toDos.length + 1
+        //toDos.length는 현재 array의 길이로, 원소가 아무것도 없으면 0
+        //요소가 추가될 때마다 length (개수)가 늘어나며, 
+        //결국 obj에서 id는 리스트에 몇번째로 저장되었는가를 의미
+    }
+    toDos.push(toDoObj);
+    //todo array에 todo object를 하나 넣어줌
 }
-
 
 function handleSubmit(event){ //todo form에 항목 입력하면 저장하는 함수
     event.preventDefault(); //argument로 event 불러오는 이유 :
@@ -44,9 +57,9 @@ function handleSubmit(event){ //todo form에 항목 입력하면 저장하는 �
 }
 
 function loadToDos(){ //로컬에서 todo 불러와 보여주는 함수
-    const toDos = localStorage.getItem(TODOS_LS);
+    const loadedtoDos = localStorage.getItem(TODOS_LS);
     //local에 저장된 todo 항목들을 불러오기
-    if(toDos !== null){
+    if(loadedtoDos !== null){
         //form과 toDolist는 항상 보여지기 때문에,
         //todo list에 값이 없어도 진행할 동작이 없다
         //따라서 todo list에 값이 있을 때만 그에 따른 동작 수행
