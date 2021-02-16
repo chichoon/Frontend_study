@@ -7,8 +7,27 @@ const toDoForm = document.querySelector('.js-toDoForm'),
 const TODOS_LS = 'toDos'
 //todo 항목들이 저장된 storage 이름
 
-function paintToDo(text){
-
+function paintToDo(text){ //입력받은 todo 요소들을 list로 보여주기 위한 함수
+    const li = document.createElement("li");
+    //querySelector은 이미 존재하는 요소를 class명 등을 이용해서 가져왔다면,
+    //createElement는 생성할 요소 종류를 적어서 Javascript 측에서 생성한다
+    //위의 예시는 li 속성의 요소를 추가하기 위함 (list 내의 내용물)
+    const delBtn = document.createElement("button");
+    //button 속성의 요소 추가 (리스트 항목 삭제용)
+    delBtn.innerText = "❌";
+    //button 위의 text 변경
+    const span = document.createElement("span");
+    //span 속성의 요소 추가
+    //span : 라인 (줄) 안에 값을 담는 container (div는 블록 container)
+    span.innerText = text;
+    //span에 적힌 text 변경
+    li.appendChild(span);
+    li.appendChild(delBtn);
+    //list의 자녀 요소로 span과 delbtn을 추가
+    //list 항목마다 span과 delbtn이 나란히 표시되도록 집어넣어줌
+    toDoList.appendChild(li);
+    //toDoList에 자녀 요소로 li 추가
+    //리스트 내에 항목을 추가
 }
 
 
@@ -19,6 +38,8 @@ function handleSubmit(event){ //todo form에 항목 입력하면 저장하는 �
     //현재 입력창에 적힌 값을 current value 변수에 넣음
     paintToDo(currentValue);
     //입력받은 값을 다루는 함수
+    toDoInput.value = "";
+    //값을 입력할 때마다 form에 적힌 text가 리셋되도록 함
 }
 
 function loadToDos(){ //로컬에서 todo 불러와 보여주는 함수
