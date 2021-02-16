@@ -25,6 +25,7 @@ function paintToDo(text){ //입력받은 todo 요소들을 list로 보여주기 
     li.appendChild(delBtn);
     //list의 자녀 요소로 span과 delbtn을 추가
     //list 항목마다 span과 delbtn이 나란히 표시되도록 집어넣어줌
+    //둘의 순서를 바꾸면 버튼이 먼저 나오고 뒤에 text가 나온다
     toDoList.appendChild(li);
     //toDoList에 자녀 요소로 li 추가
     //리스트 내에 항목을 추가
