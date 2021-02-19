@@ -23,7 +23,7 @@ let sign = '';
 let signPressed = false;
 
 function showPanel(n){
-    numberPanel.innerHTML(n);
+    numberPanel.innerHTML = n;
 }
 
 function handleClickNum(event){
@@ -43,32 +43,16 @@ function handleClickSign(event){
     const btn = event.target;
     const num1 = parseInt(num_tmp);
     const num2 = parseInt(num);
+    console.log(`num1 : ${num1}, num2 : ${num2}`)
 
-    if(num_tmp !== null){
-        if(signPressed){
-            showPanel(result);
-            num_tmp = result;
-        }
-        switch(btn.id){
-            case 'add':
-                result = num1 + num2;
-                break; 
-            case 'sub':
-                result = num1 - num2;
-                break;
-            case 'mul':
-                result = num1 * num2;
-                break;
-            case 'div':
-                result = num1 / num2;
-                break
-        }
-
-    } else {
-        signPressed = true;
+    if(!num_tmp){
         num_tmp = num;
-        sign = btn.id;
+        signPressed = true;
+    } else {
+
     }
+
+    console.log(signPressed);
 }
 
 function handleClickClear(event){
