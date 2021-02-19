@@ -75,9 +75,8 @@ function handleClickSign(event){
 function handleClickClear(){
     num = '';
     num_tmp = '';
-    result = '';
     showPanel(0);
-    console.log("clear");
+    console.log("clear")
 }
 
 function handleClickEqual(event){
