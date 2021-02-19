@@ -64,6 +64,7 @@ function handleClickSign(event){
     if(signPressed2){
         const result = calculate(num1, num2, sign);
         showPanel(result);
+        num = result;
     } else {
         signPressed2 = true;
     }
@@ -81,9 +82,13 @@ function handleClickClear(){
 
 function handleClickEqual(event){
     const num1 = num_tmp, num2 = num;
-    const result = calculate(num1, num2, sign);
-    showPanel(result);
-    signPressed2 = false;
+    if(!num1){
+        const result = calculate(num1, num2, sign);
+        showPanel(result);
+        signPressed2 = false;
+    } else {
+        showPanel(num2);
+    }
 }
 
 function init(){
