@@ -1,0 +1,41 @@
+body {
+    background-color: #ecf0f1;
+    color: #34495e;
+}
+.result {
+    display: inline-block; 
+    width:311px; 
+    height:40px;
+    text-align: right;
+    font-size: 30px;
+    vertical-align: middle;
+    margin-bottom:5px;
+}
+.button {
+    width: 100px;
+    height: 50px;
+    border: 1px solid rgb(0, 0, 0);
+    padding: 5px;
+    border-top-left-radius: 5px; 
+    border-bottom-left-radius: 5px;
+    border-top-right-radius: 5px; 
+    border-bottom-right-radius: 5px;
+    color:aliceblue;
+    margin-bottom:5px;
+}
+button:hover{
+    background-color: black;
+}
+.c {
+    background-color: rgb(143, 159, 182);
+}
+.num{
+    background-color: rgb(46, 66, 95);
+}
+.sign{
+    background-color:rgb(80, 136, 219);
+}
+.zero{
+    width: 205px;
+    background-color: rgb(46, 66, 95);
+}
