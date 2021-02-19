@@ -28,15 +28,11 @@ function showPanel(n){
 
 function handleClickNum(event){
     const btn = event.target;
-    if(!signPressed){
-        num += btn.id; 
-        showPanel(num);
-    } else {
+    if(signPressed){
         num = '';
-        num += btn.id; 
-        showPanel(num);
-        signPressed = false;
     }
+    num += btn.id; 
+    showPanel(num);
 }
 
 function handleClickSign(event){
@@ -50,29 +46,45 @@ function handleClickSign(event){
         signPressed = true;
     } else {
         if(signPressed){
-            numberPanel.innerHTML = result;
+            showPanel(result);
+            console.log('sign pressed')
+            signPressed = false;
         }
         switch(btn.id){
             case 'add':
                 result = num1 + num2;
+                console.log(result);
                 break;
-            case 'sub' :
+            case 'sub':
                 result = num1 - num2;
+                console.log(result);
+                break;
+            case 'mul':
+                result = num1 * num2;
+                console.log(result);
+                break;
+            case 'div':
+                result = num1 / num2;
+                console.log(result);
+                break;
         }
-
     }
-
-    console.log(signPressed);
 }
 
-function handleClickClear(event){
+function handleClickClear(){
     num = '';
     num_tmp = '';
+    result = '';
     showPanel(0);
+    console.log("clear");
 }
 
 function handleClickEqual(event){
-
+    if(!result){
+        
+    } else {
+        showPanel(result);
+    }
 }
 
 function init(){
@@ -91,7 +103,7 @@ function init(){
     id_mul.addEventListener("click", handleClickSign);
     id_div.addEventListener("click", handleClickSign);
     id_equ.addEventListener("click", handleClickEqual);
-    id_C.addEventListener("click", handleClickClear);
-    console.log(id_0);
+    id_c.addEventListener("click", handleClickClear);
+    console.log(id_c);
 }
 init();
