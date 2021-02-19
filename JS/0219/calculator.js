@@ -59,11 +59,11 @@ function handleClickNum(event){
 
 function handleClickSign(event){
     const btn = event.target;
+    sign = btn.id;
     const num1 = num_tmp, num2 = num;
     if(signPressed2){
-        const result = calculate(num1, num2, btn.id);
+        const result = calculate(num1, num2, sign);
         showPanel(result);
-        signPressed2 = false;
     } else {
         signPressed2 = true;
     }
@@ -81,8 +81,9 @@ function handleClickClear(){
 
 function handleClickEqual(event){
     const num1 = num_tmp, num2 = num;
-    const result = calculate(num1, num2, btn.id);
+    const result = calculate(num1, num2, sign);
     showPanel(result);
+    signPressed2 = false;
 }
 
 function init(){
