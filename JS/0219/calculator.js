@@ -49,6 +49,16 @@ function handleClickSign(event){
         num_tmp = num;
         signPressed = true;
     } else {
+        if(signPressed){
+            numberPanel.innerHTML = result;
+        }
+        switch(btn.id){
+            case 'add':
+                result = num1 + num2;
+                break;
+            case 'sub' :
+                result = num1 - num2;
+        }
 
     }
 
