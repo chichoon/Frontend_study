@@ -59,21 +59,16 @@ function handleClickNum(event){
 
 function handleClickSign(event){
     const btn = event.target;
+    const num1 = num_tmp, num2 = num;
     if(signPressed2){
         const result = calculate(num1, num2, btn.id);
         showPanel(result);
         signPressed2 = false;
     } else {
-        
+        signPressed2 = true;
     }
-
-
-
-    const num1 = parseInt(num_tmp), num2 = parseInt(num);
     console.log(`num1 : ${num1}, num2 = ${num2}`);
-    console.log(num1 + num2);
     signPressed = true;
-    result = num1 + num2;
 }
 
 function handleClickClear(){
@@ -85,6 +80,8 @@ function handleClickClear(){
 }
 
 function handleClickEqual(event){
+    const num1 = num_tmp, num2 = num;
+    const result = calculate(num1, num2, btn.id);
     showPanel(result);
 }
 
