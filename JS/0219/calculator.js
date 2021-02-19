@@ -73,7 +73,7 @@ function handleClickSign(event){
 }
 
 function handleClickClear(){
-    num = '';
+    num = '0';
     num_tmp = '';
     showPanel(0);
     console.log("clear")
@@ -82,11 +82,11 @@ function handleClickClear(){
 function handleClickEqual(event){
     const num1 = num_tmp, num2 = num;
     if(!num1){
+        showPanel(num2);
+    } else {
         const result = calculate(num1, num2, sign);
         showPanel(result);
         signPressed2 = false;
-    } else {
-        showPanel(num2);
     }
 }
 
