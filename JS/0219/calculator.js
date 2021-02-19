@@ -18,7 +18,6 @@ const numberPanel = document.querySelector('.result');
 
 let num_tmp = '';
 let num = '';
-let result;
 let sign = '';
 let signPressed = false;
 
@@ -26,49 +25,42 @@ function showPanel(n){
     numberPanel.innerHTML = n;
 }
 
+function calculate(num1, num2, sign){
+    const num_1 = parseInt(num1), num_2 = parseInt(num2);
+    let result;
+    switch(sign){
+        case 'add':
+            result = num_1 + num_2;
+            break;
+        case 'sub':
+            result = num_1 - num_2;
+            break;
+        case 'mul':
+            result = num_1 * num_2;
+            break;
+        case 'div':
+            result = num_1 / num_2;
+            break;
+    }
+}
+
 function handleClickNum(event){
     const btn = event.target;
     if(signPressed){
+        num_tmp = num;
         num = '';
+        signPressed = false;
     }
     num += btn.id; 
     showPanel(num);
 }
 
 function handleClickSign(event){
-    const btn = event.target;
-    const num1 = parseInt(num_tmp);
-    const num2 = parseInt(num);
-    console.log(`num1 : ${num1}, num2 : ${num2}`)
-
-    if(!num_tmp){
-        num_tmp = num;
-        signPressed = true;
-    } else {
-        if(signPressed){
-            showPanel(result);
-            console.log('sign pressed')
-            signPressed = false;
-        }
-        switch(btn.id){
-            case 'add':
-                result = num1 + num2;
-                console.log(result);
-                break;
-            case 'sub':
-                result = num1 - num2;
-                console.log(result);
-                break;
-            case 'mul':
-                result = num1 * num2;
-                console.log(result);
-                break;
-            case 'div':
-                result = num1 / num2;
-                console.log(result);
-                break;
-        }
-    }
+    const num1 = parseInt(num_tmp), num2 = parseInt(num);
+    console.log(`num1 : ${num1}, num2 = ${num2}`);
+    console.log(num1 + num2);
+    signPressed = true;
+    result = num1 + num2;
 }
 
 function handleClickClear(){
@@ -80,11 +72,7 @@ function handleClickClear(){
 }
 
 function handleClickEqual(event){
-    if(!result){
-        
-    } else {
-        showPanel(result);
-    }
+    showPanel(result);
 }
 
 function init(){
