@@ -18,30 +18,63 @@ const numberPanel = document.querySelector('.result');
 
 let num_tmp = '';
 let num = '';
+let result;
 let sign = '';
 let signPressed = false;
+
+function showPanel(n){
+    numberPanel.innerHTML(n);
+}
 
 function handleClickNum(event){
     const btn = event.target;
     if(!signPressed){
         num += btn.id; 
-        numberPanel.innerHTML = num;
-        console.log(num);
+        showPanel(num);
     } else {
         num = '';
         num += btn.id; 
+        showPanel(num);
         signPressed = false;
     }
 }
 
 function handleClickSign(event){
     const btn = event.target;
-    signPressed = true;
-    num_tmp = num;
+    const num1 = parseInt(num_tmp);
+    const num2 = parseInt(num);
+
+    if(num_tmp !== null){
+        if(signPressed){
+            showPanel(result);
+            num_tmp = result;
+        }
+        switch(btn.id){
+            case 'add':
+                result = num1 + num2;
+                break; 
+            case 'sub':
+                result = num1 - num2;
+                break;
+            case 'mul':
+                result = num1 * num2;
+                break;
+            case 'div':
+                result = num1 / num2;
+                break
+        }
+
+    } else {
+        signPressed = true;
+        num_tmp = num;
+        sign = btn.id;
+    }
 }
 
 function handleClickClear(event){
-
+    num = '';
+    num_tmp = '';
+    showPanel(0);
 }
 
 function handleClickEqual(event){
