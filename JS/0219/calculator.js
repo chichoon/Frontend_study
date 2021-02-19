@@ -20,6 +20,7 @@ let num_tmp = '';
 let num = '';
 let sign = '';
 let signPressed = false;
+let signPressed2 = false;
 
 function showPanel(n){
     numberPanel.innerHTML = n;
@@ -42,6 +43,7 @@ function calculate(num1, num2, sign){
             result = num_1 / num_2;
             break;
     }
+    return result;
 }
 
 function handleClickNum(event){
@@ -56,6 +58,17 @@ function handleClickNum(event){
 }
 
 function handleClickSign(event){
+    const btn = event.target;
+    if(signPressed2){
+        const result = calculate(num1, num2, btn.id);
+        showPanel(result);
+        signPressed2 = false;
+    } else {
+        
+    }
+
+
+
     const num1 = parseInt(num_tmp), num2 = parseInt(num);
     console.log(`num1 : ${num1}, num2 = ${num2}`);
     console.log(num1 + num2);
