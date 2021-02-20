@@ -2,15 +2,15 @@ const body = document.querySelector("body");
 
 const IMG_NUM = 15;
 
-function handleImageLoad(){
-    body.appendChild(image);
-}
-
 function paintImage(imgNum){
     //난수에 대응하는 사진을 배경으로 지정하는 함수
     const image = new Image();
     image.src = `images/${imgNum}.jpg`;
-    image.addEventListener("loadend", handleImageLoad);
+    //이미지 위치 불러오기
+    image.classList.add('bgImage');
+    //이미지에 클래스 추가
+    body.appendChild(image);
+    //body에 이미지 붙이기
 }
 
 function genRandom(){ //랜덤 숫자를 생성하는 함수
