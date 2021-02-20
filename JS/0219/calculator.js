@@ -86,33 +86,58 @@ function handleClickSign(event){
     const btn = event.target;
     //버튼의 종류 받아오는 함수
     sign = btn.id;
+    //버튼의 id를 이용하여 사칙연산 기호 종류 판별
     const num1 = num_tmp, num2 = num;
+    //전역변수에 저장된 숫자 string 상수로 가져오기 
+    //(도중에 변경 방지)
     if(signPressed2){
+        //사칙연산 기호가 2번 이상 눌렸을 때
         const result = calculate(num1, num2, sign);
+        //이전까지의 결과 (전역변수로 저장된 sign 이용) 계산
+        //sign은 매번 기호 버튼 누를 때마다 전역변수로 저장됨
         showPanel(result);
+        //계산기 화면에 이전까지의 계산값 출력
         num = result;
+        //이전까지의 계산값을 num에 저장 (연쇄 계산 위함)
     } else {
         signPressed2 = true;
+        //sign 버튼을 처음 눌렀을 때 다음 클릭시 2회 이상이 되므로
+        //signPressed2 플래그를 true로 변경해 결과값을 화면에 띄우게 함
     }
-    console.log(`num1 : ${num1}, num2 = ${num2}`);
     signPressed = true;
+    //sign 버튼을 눌렀으므로 숫자 버튼을 눌렀을 때 
+    //다음 숫자를 입력받을 수 있게 signPressed를 true로 함
 }
 
 function handleClickClear(){
     num = '0';
     num_tmp = '';
     showPanel(0);
-    console.log("clear")
+    signPressed = false;
+    signPressed2 = false;
+    sign = '';
+    //clear 시 모든 상태 초기화
 }
 
-function handleClickEqual(event){
+function handleClickEqual(){
+    // =버튼을 눌렀을 때 발생하는 이벤트 핸들러
     const num1 = num_tmp, num2 = num;
     if(!num1){
         showPanel(num2);
+        //num_tmp에 저장된 값이 없을 경우 num2의 값 출력
+        //(숫자 키를 한 번만 누르고 =을 눌렀을 때 Undefined 출력 방지)
     } else {
         const result = calculate(num1, num2, sign);
+        //이전까지의 계산값 도출
         showPanel(result);
+        //계산값 출력
+        num = '0';
+        num_tmp = '';
+        sign = '';
+        signPressed = false;
         signPressed2 = false;
+        //clear와 같이 다른 모든 값 초기화
+        //(equal 버튼 클릭 이후 새로운 연산 시작)
     }
 }
 
@@ -133,6 +158,7 @@ function init(){
     id_div.addEventListener("click", handleClickSign);
     id_equ.addEventListener("click", handleClickEqual);
     id_c.addEventListener("click", handleClickClear);
-    console.log(id_c);
+    //이벤트 리스너 추가 (initialize 함수)
 }
 init();
+//initialize 통해 리스너 추가 후 작동 시작
