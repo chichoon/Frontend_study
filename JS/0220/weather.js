@@ -1,7 +1,22 @@
 const COORDS = 'coords';
 
+function saveCoords(coordsObj){ //localStorage에 좌표 object를 저장하는 함수
+    localStorage.setItem(COORDS, JSON.stringify(coordsObj));
+    //object를 json.stringify를 이용하여 string화 시킨 후 저장
+}
+
 function handleGeoSuccess(position){ //좌표를 가져오는데 성공했을 경우 실행되는 함수
-    console.log(position);
+    const latitude = position.coords.latitude;
+    const longitude = position.coords.longitude;
+    const coordsObj = {
+        latitude,
+        longitude
+        //객체 (Object)에서 키 이름과 키값 변수명이 같을 땐
+        //그냥 이렇게 해줘도 latitude : latitude와 같은 결과를 갖는다
+    };
+    //위도와 경도를 객체 내에 저장
+    saveCoords(coordsObj);
+    //해당 객체를 localStorage에 저장하는 함수
 }
 
 function handleGeoError(){
