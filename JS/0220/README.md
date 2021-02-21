@@ -14,3 +14,5 @@
     ![좌표 불러오기 성공](./JSgeolocation.png)
     - 좌표 불러오기 성공하여 리턴값을 console.log 했을 경우, 위와 같은 object가 출력된다
     - object에는 정확도나 시간, 위도와 경도가 표시됨
+    ![좌표 로컬에 저장](./JSgeolocationSavedLocal.png)
+    - object이므로, 내부 요소인 latitude나 longitude만을 빼올 수도 있음 (당연히)
