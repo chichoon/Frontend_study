@@ -18,3 +18,4 @@
         
     ![좌표 로컬에 저장](./JSgeolocationSavedLocal.png)
     - object이므로, 내부 요소인 latitude나 longitude만을 빼올 수도 있음 (당연히)
+- api를 이용하여 데이터를 불러올 때, 네트워크를 사용하므로 데이터가 로딩 완료됐을 때 함수를 실행하기 위해 **.then**을 사용한다
