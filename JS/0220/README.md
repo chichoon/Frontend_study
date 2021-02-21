@@ -11,6 +11,6 @@
     - **getCurrentPosition(함수1, 함수2)** 함수를 이용하여 현재 위치의 좌표를 불러올 수 있다
     - 함수1은 좌표 불러오기에 성공했을 경우 실행됨
     - 함수2는 좌표 불러오기에 실패했을 경우 실행됨
-    ![좌표 불러오기 성공](./JSgeolocationSuccess.png)
+    ![좌표 불러오기 성공](./JSgeolocation.png)
     - 좌표 불러오기 성공하여 리턴값을 console.log 했을 경우, 위와 같은 object가 출력된다
     - object에는 정확도나 시간, 위도와 경도가 표시됨
