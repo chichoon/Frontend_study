@@ -56,6 +56,19 @@
 - 내부에 input 태그와 함께 쓰임
   - **type** : input의 종류 (text, number, ...)
   - **placeholder** : input 입력창에 미리 적혀있는 값 (보통 설명)
+  - **required** : 입력 안하고 submit 선택하면 경고가 나옴
+  - **minlength** : 필요 최소 글자수
+  - **accept** : input type가 file일 때, 받을 파일의 확장자를 지정 (".png, .pdf" 등)
+- 기타 form 내부 태그들
+  - **label** : input과 연결하여 사용하는 태그로, 텍스트를 누르면 연결된 input이 작동한다
+    - for="아이디" 로 input 태그와 연결하며, 해당 칸에 input의 태그 id를 입력하면 됨
+
+## Tag ID
+
+- 어떤 태그에나 넣을 수 있는 attribute로, 같은 이름의 태그를 구분하기 위함
+- 한 요소당 **하나의 id**만 넣을 수 있음 (여러개 넣어도 에러는 안 나지만 동작도 안함)
+- 또한 id는 **고유한 값**이어야 함
+- CSS가 id를 이용해서 (또는 class) 해당 요소의 색상을 변경하기 때문에, id는 고유해야 함
 
 ### _번외 : 여러 가지 태그들 (둘러보기)_
 
