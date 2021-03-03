@@ -24,3 +24,22 @@
   3. 모든 웹사이트 내부는 head와 body로 구분되어 있음
      - head는 외부적으로 보여지지 않는 setting을 해주는 역할
      - body는 실질적으로 보여지는 content 코드부분
+
+## Head
+
+- **meta** 태그
+
+  - 홈페이지에 관련된 추가적인 데이터
+  - 예를 들어 meta content는 홈페이지의 설명을 입력 (검색엔진에서 띄워줌)
+  - meta charset은 홈페이지의 인코딩타입을 변경 (utf-8 등)
+  - meta 태그는 self closing 태그이다
+
+- **lang** attribute
+
+  - 해당 홈페이지의 언어설정을 알려줌
+  - 검색엔진에서 사용함
+
+- **link** 태그
+  - rel="shortcut icon" (shortcut icon으로 설정하겠다는 뜻)
+  - sizes="16*16 32*32 64\*64" (이미지 사이즈 지정)
+  - href="링크" (이미지 링크)
