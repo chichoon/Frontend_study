@@ -17,6 +17,7 @@
 - 이처럼 이미 브라우저와 약속된 attribute를 쓸 경우엔 문제 없이 약속대로 작동됨
 - 사전에 정의되지 않은 attribute를 쓸 경우엔 에러는 없지만 써도 의미가 없다
 - href 등 몇몇 attribute는 특정 태그에서만 동작함, 모든 태그에서 동작하는 attribute도 있음
+- attribute는 큰따옴표로 주자
 
 ## HTML rules
 
@@ -76,11 +77,12 @@
 - 한 요소당 **하나의 id**만 넣을 수 있음 (여러개 넣어도 에러는 안 나지만 동작도 안함)
 - 또한 id는 **고유한 값**이어야 함
 - CSS가 id를 이용해서 (또는 class) 해당 요소의 색상을 변경하기 때문에, id는 고유해야 함
+- body에마저도 id를 부여할 수 있다
 
 ## Semantic HTML
 
 - 문서를 보기만 해도 그 의미를 짐작할 수 있는 것을 Semantic이라 함
-- 따라서 다른 작업자가 딱 봐도 document나 code를 명확하게 알아볼 수 있도록 짜는 것이 좋습니다
+- 따라서 다른 작업자가 딱 봐도 document나 code를 명확하게 알아볼 수 있도록 Semantic tag를 이용하여 짜는 것이 좋습니다
 - 예시로 **header**, **main**, **footer** 는 div와 정확히 같은 역할을 함
   - 그래도 이러한 태그를 사용해주면 코드만 봐도 해당 부분이 어떠한 역할을 해주는 지 알기 쉽기 때문에 **Semantic Tag**에 속한다
 - 반대로 **div**, **span** 은 **non-semantic tag** 에 속한다
