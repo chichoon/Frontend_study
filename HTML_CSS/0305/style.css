@@ -13,6 +13,10 @@ h1 {
   */
 }
 
+html {
+  background-color: black;
+}
+
 div {
   height: 150px;
   width: 150px;
@@ -22,5 +26,7 @@ div {
 span {
   height: 100px;
   width: 100px;
+  /*width와 height 영향 없음*/
+  color: white;
   background-color: rgb(35, 35, 150);
 }

@@ -28,8 +28,19 @@
 
 - 웹사이트는 여러 개의 Box들로 이루어져 있으며 레이아웃을 결정하는 데에 가장 큰 영향을 미침
 - **div** 는 양 옆에 다른 요소들이 오지 못함 (위아래로만 가능)
-  - 이러한 요소를 **block** 이라 하며, width와 height의 영향을 받음
+  - 이러한 요소를 **block** 이라 함
+    - width와 height의 영향을 받음
+    - display: inline으로 inline 속성으로 바꿀 수 있음 (하지만 내용물이 없으면 width, height의 영향을 받을 수 없어 사라짐)
     - header, quote 등 대부분의 요소들은 block이다
+    -
 - **span** 은 양 옆에 어떠한 요소든 올 수 있음
-  - 이러한 요소를 **inline**이라 하며, width와 height의 영향을 받지 않음
+  - 이러한 요소를 **inline**이라 함
+    - width와 height의 영향을 받지 않음 (내용물의 길이에만 영향을 받음)
+    - display: block으로 block 속성으로 바꿀 수 있음
     - 아주 작은 글 (span) 이나 링크, 그림 등등이 inline에 속함
+
+## Margin
+
+- block이 가지는 특성으로, 화면 전체 (html 태그로 표현되는) 로부터 block이 가지는 여백
+- 브라우저가 자동으로 넣는 style이 있기 때문에, margin을 주지 않은 상태에서도 margin이 있는 것처럼 보이게 됨
+  - h1, h2, ... 이 굵은 글씨로 표시되는 등이 브라우저가 사전에 넣는 style **(user agent stylesheet)**
