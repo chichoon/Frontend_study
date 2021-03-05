@@ -2,5 +2,10 @@
 
 ## CSS를 HTML에 추가하기
 
-1. style 태그 이용해서 html 파일 내에 박아넣기
+1. style 태그 이용해서 html 파일의 head태그 내에 박아넣기
 2. 파일 분리 후 html에서 읽어들이기
+   - link href="css파일위치" 를 head에 넣으면 불러와진다
+   - 추가 attribute로 rel="stylesheet"를 넣어야함 (html파일과의 관계가 stylesheet라는 의미)
+
+- 가능하면 html과 분리하는 게 좋다
+  - (다른 html 페이지와도 불러와서 호환이 쉽기 때문)
