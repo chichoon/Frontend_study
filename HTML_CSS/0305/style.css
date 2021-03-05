@@ -12,3 +12,15 @@ h1 {
   또한 property명은 띄어쓰기나 언더바 (_) 가 사용되지 않고, 소문자와 -로 작성
   */
 }
+
+div {
+  height: 150px;
+  width: 150px;
+  background-color: rgb(180, 180, 255);
+}
+
+span {
+  height: 100px;
+  width: 100px;
+  background-color: rgb(35, 35, 150);
+}
