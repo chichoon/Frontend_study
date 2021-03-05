@@ -1,0 +1,15 @@
+/*
+selector {
+    property1: propertydetail1;
+    property2: propertydetail2;
+}
+*/
+h1 {
+  font-style: italic;
+  color: blueviolet;
+  /*
+  CSS에서는 한 줄을 ;로 끝냄 (C, Java와 비슷)
+  또한 property명은 띄어쓰기나 언더바 (_) 가 사용되지 않고, 소문자와 -로 작성
+  
+  */
+}
