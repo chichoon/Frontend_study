@@ -41,6 +41,19 @@
 
 ## Margin
 
-- block이 가지는 특성으로, 화면 전체 (html 태그로 표현되는) 로부터 block이 가지는 여백
+- box가 가지는 특성으로, 화면 전체 (html 태그로 표현되는) 로부터 box가 가지는 여백
+- box의 경계면 (border) 로부터 바깥에 있는 공간이라고 보면 됨
 - 브라우저가 자동으로 넣는 style이 있기 때문에, margin을 주지 않은 상태에서도 margin이 있는 것처럼 보이게 됨
   - h1, h2, ... 이 굵은 글씨로 표시되는 등이 브라우저가 사전에 넣는 style **(user agent stylesheet)**
+- margin: 10px;
+  - 값을 하나만 넣으면 상하좌우 모두 적용
+- margin: 10px 15px;
+  - 값을 2개 넣으면 앞 값은 위아래, 뒤 값은 좌 우로 적용
+- margin: 10px 15px 20px 30px;
+  - 값을 4개 넣으면 각각 위, 오른쪽, 아래쪽, 왼쪽으로 적용 (시계방향 순)
+
+## Collapsing margins
+
+- 요소 A와 A의 하위 요소 B의 상하 경계가 일치할 경우 두 요소의 margin이 함께 적용되는 현상
+- 요소 A에 margin을 상하 10px 넣고, 요소 A 내의 요소 B에 margin을 상하 20px 넣었을 경우 요소 B의 margin이 더 크기 때문에 요소 A의 margin을 무시하고 요소 A와 요소 B의 margin을 동시에 20px 적용
+- 좌우로는 적용되지 않고 (개별적으로 적용됨) 상하로만 적용됨
