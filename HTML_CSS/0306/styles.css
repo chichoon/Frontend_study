@@ -25,23 +25,11 @@ span {
   height: 150px;
   width: 150px;
 }
-#div2 {
-  background-color: red;
-  height: 30px;
-  width: 30px;
-  margin: 12px 60px 12px 60px;
-}
 #div3 {
   background-color: blue;
   height: 30px;
   width: 90px;
   margin: 12px 30px 12px 30px;
-}
-#div4 {
-  background-color: red;
-  height: 30px;
-  width: 30px;
-  margin: 12px 60px 12px 60px;
 }
 
 /*Class를 가리키는 방법 (.CLASS)*/
@@ -52,4 +40,15 @@ span {
 .span2 {
   background-color: white;
   color: red;
+}
+.potato {
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.div2 {
+  background-color: red;
+  height: 30px;
+  width: 30px;
+  margin: 12px 60px 12px 60px;
 }

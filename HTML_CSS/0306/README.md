@@ -14,7 +14,8 @@
 
 - 같은 태그의 요소들을 구분하기 위한 개별적인 이름
 - 중복되는 ID는 사용 불가함, 모두 다른 이름
-- CSS에서 가리키는 방법 : #ID {}
+- 한 요소에 여러 ID를 부여할 수는 없음
+- **CSS**에서 가리키는 방법 : #ID {}
 
 ## Border
 
@@ -23,6 +24,7 @@
 - border: 2px solid black
 - inline 요소에도 border은 적용될 수 있다
 - **border-style** 이용해서 스타일을 바꿔줄 수도 있다
+- **border-radius** 이용해서 모서리를 둥글릴 수도 있음
 
 ## Classes
 
@@ -30,4 +32,5 @@
 - ID와 비슷하지만, 여러 요소에 중복된 class를 부여할 수 있음
   - 따라서 ID에 따른 style에 속성값을 복붙할 필요가 없음
 - 요소를 class로 묶어서 class마다 다른 style을 부여할 수 있다
-- CSS에서 가리키는 방법 : .CLASS{}
+- 한 요소에 여러 class를 부여할 수도 있다
+- **CSS**에서 가리키는 방법 : .CLASS{}
