@@ -1,0 +1,34 @@
+/*태그를 가리키는 방법*/
+body {
+  background-color: black;
+}
+div {
+  background-color: azure;
+}
+html {
+  background-color: aqua;
+}
+/*ID를 가리키는 방법 (#ID) */
+#div1 {
+  padding: 1px;
+  height: 150px;
+  width: 150px;
+}
+#div2 {
+  background-color: red;
+  height: 30px;
+  width: 30px;
+  margin: 12px 60px 12px 60px;
+}
+#div3 {
+  background-color: blue;
+  height: 30px;
+  width: 90px;
+  margin: 12px 30px 12px 30px;
+}
+#div4 {
+  background-color: red;
+  height: 30px;
+  width: 30px;
+  margin: 12px 60px 12px 60px;
+}
