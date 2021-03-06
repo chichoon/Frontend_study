@@ -8,6 +8,7 @@
 - 따라서 Padding을 주면 box와 내부 요소들 사이에 공간이 생긴다
 - (Margin은 box와 상위 요소 사이에 공간이 생겼음)
 - 순서는 margin과 동일
+- inline 요소에도 적용될 수 있음
 
 ## ID
 
@@ -20,3 +21,9 @@
 - Box의 경계면
 - border의 두께를 지정하고, 스타일과 색을 지정한다
 - border: 2px solid black
+- inline 요소에도 border은 적용될 수 있다
+- **border-style** 이용해서 스타일을 바꿔줄 수도 있다
+
+## Classes
+
+-

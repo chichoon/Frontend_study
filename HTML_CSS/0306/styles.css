@@ -6,12 +6,16 @@
 /*태그를 가리키는 방법*/
 body {
   background-color: black;
+  margin: 20px;
 }
 div {
   background-color: azure;
 }
 html {
   background-color: aqua;
+}
+span {
+  background-color: teal;
 }
 
 /*ID를 가리키는 방법 (#ID) */
