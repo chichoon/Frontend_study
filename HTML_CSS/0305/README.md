@@ -1,4 +1,4 @@
-# 3월 4일 (목요일) HTML/CSS/JS 04
+# 3월 5일 (금요일) HTML/CSS/JS 05
 
 ## CSS를 HTML에 추가하기
 
