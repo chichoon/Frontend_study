@@ -65,6 +65,11 @@
 
   - 주축과 교차축은 나중에 **flex-direction** 속성을 통해 바꿀 수 있음
     - default는 row로, column으로 조정해줄 시 주축과 교차축이 뒤바뀐다
+    - row-reverse나 column-reverse는 요소의 순서를 뒤바꾼다 (row-reverse는 우에서 좌로, column-reverse는 하에서 상으로)
+  - **Flex-wrap** 속성은 내용물의 크기를 부모 요소의 크기에 맞춰 변형할 것인지, 아니면 다른 줄로 넘기더라도 크기를 유지할 것인지 결정함
+    - default는 nowrap로, 화면 크기가 줄어들면 내용물의 기본 크기를 무시하고 같은 줄에 위치하도록 크기를 같이 줄여버림
+    - wrap으로 변경해주면 내용물의 기본 크기를 유지하기 위해 줄옮김을 함
+    - wrap-reverse는 내용물의 순서를 바꿔버리면서 wrap을 적용함
 
 ## vh
 
