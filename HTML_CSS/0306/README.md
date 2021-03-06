@@ -34,3 +34,12 @@
 - 요소를 class로 묶어서 class마다 다른 style을 부여할 수 있다
 - 한 요소에 여러 class를 부여할 수도 있다
 - **CSS**에서 가리키는 방법 : .CLASS{}
+
+## Inline block
+
+- display: inline 속성으로 block을 inline으로 바꿀 수 있지만, 안에 내용물이 없으면 사라지기 때문에 구리다
+  - (width, height를 정해줄 수 없고 내용물의 크기에 따라 결정되기 때문에)
+- **display: inline-block** 속성은 inline과 block의 속성을 둘 다 가진 것으로, 옆에 다른 요소가 위치할 수 있으면서 margin이 제대로 작동하고, width와 height를 가질 수 있다
+  - 하지만 굉장히 오래된 속성이고, 기본 특성 자체가 영 별로임 (제멋대로 요소 사이에 공간을 주는 등)
+  - 또한 크기가 유동적이지 않아 (화면 크기에 따라 변화하지 않음) margin을 하나하나 계산해서 줘야하는 등 번거로움
+  - 이렇게 계산해서 넣은 margin은 브라우저 동작 화면 크기에 따라 형식이 무너질 가능성이 있어 정말 별로다 (Responsive Design을 지원하지 않는다는 뜻)
