@@ -16,6 +16,7 @@ html {
 }
 span {
   background-color: teal;
+  padding: 10px;
 }
 
 /*ID를 가리키는 방법 (#ID) */
@@ -41,4 +42,14 @@ span {
   height: 30px;
   width: 30px;
   margin: 12px 60px 12px 60px;
+}
+
+/*Class를 가리키는 방법 (.CLASS)*/
+.span1 {
+  background-color: red;
+  color: white;
+}
+.span2 {
+  background-color: white;
+  color: red;
 }
