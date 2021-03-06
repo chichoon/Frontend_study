@@ -7,9 +7,16 @@
 - **Padding**은 box의 경계로부터 **안쪽**에 있는 공간
 - 따라서 Padding을 주면 box와 내부 요소들 사이에 공간이 생긴다
 - (Margin은 box와 상위 요소 사이에 공간이 생겼음)
+- 순서는 margin과 동일
 
 ## ID
 
 - 같은 태그의 요소들을 구분하기 위한 개별적인 이름
 - 중복되는 ID는 사용 불가함, 모두 다른 이름
 - CSS에서 가리키는 방법 : #ID {}
+
+## Border
+
+- Box의 경계면
+- border의 두께를 지정하고, 스타일과 색을 지정한다
+- border: 2px solid black
