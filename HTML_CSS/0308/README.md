@@ -46,6 +46,15 @@
   - **div > span** 은 div의 직속 자녀인 span에게만 효과를 부여하고, div의 자식인 p의 자식 span에겐 영향을 주지 않음
 - **요소A + 요소B** 는 요소A 바로 옆에 있는 요소B에게 효과 적용 (한 칸이라도 멀리 떨어져있으면 안됨)
 - **요소A ~ 요소B** 는 요소 A 뒤에 있는 모든 요소B에게 효과 적용 (+와 달리 멀리 떨어져있어도 됨)
+- **요소[attribute="attr"]** 은 attribute가 attr인 요소에게 효과 적용
+- **요소[attribute~="attr"]** 은 attribute에 attr을 포함한 요소에게 효과 적용
+  - **attr**a, **attr**b, c**attr** 모두 적용된다는 뜻
+- **요소[attribute$="attr"]** 은 attribute가 attr로 끝나는 요소에게 효과 적용
+  - asdsafa**attr**에게 효과 적용됨
+- **요소[attribute^="attr"]** 은 attribute가 attr로 시작하는 요소에게 효과 적용
+  - **attr**asdsafa에게 효과 적용됨
+
+### _MDN을 사랑하자_
 
 ## 번외 : Selectors 우선순위 문제
 
