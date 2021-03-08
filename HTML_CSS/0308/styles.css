@@ -6,10 +6,21 @@ body {
   background-color: indigo;
 }
 
+div {
+  width: 30px;
+  height: 30px;
+  background-color: white;
+}
+
+span {
+  background-color: tomato;
+  color: white;
+}
+
 #div1 {
   width: 200px;
   height: 200px;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 #div2 {
@@ -24,15 +35,31 @@ body {
   position: fixed;
   width: 100px;
   height: 100px;
-  background-color: magenta;
+  background-color: rgba(255, 0, 255, 0.5);
   top: 50px;
 }
 
 .divclass {
-  background-color: teal;
+  background-color: rgba(30, 200, 255, 0.7);
   height: 200px;
   width: 100px;
   position: relative;
   top: -30px;
   right: -150px;
 }
+
+span:nth-child(even) {
+  background-color: blueviolet;
+}
+/*전체 html 내 짝수번째 span에게 영향을 미침*/
+
+p span {
+  background-color: teal;
+}
+/*p 하위에 있는 모든 span에게 영향을 미침*/
+
+div > span {
+  background-color: black;
+  color: white;
+}
+/*div의 직속 자녀 span에게만 영항을 미침*/
