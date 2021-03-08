@@ -46,3 +46,11 @@
   - **div > span** 은 div의 직속 자녀인 span에게만 효과를 부여하고, div의 자식인 p의 자식 span에겐 영향을 주지 않음
 - **요소A + 요소B** 는 요소A 바로 옆에 있는 요소B에게 효과 적용 (한 칸이라도 멀리 떨어져있으면 안됨)
 - **요소A ~ 요소B** 는 요소 A 뒤에 있는 모든 요소B에게 효과 적용 (+와 달리 멀리 떨어져있어도 됨)
+
+## 번외 : Selectors 우선순위 문제
+
+![이미지](CSSpriority.png)
+
+- p span이 span:nth-child(even) 보다 아래에 있음에도 cascading을 따르지 않고 span:nth child(even) 의 효과가 p span 효과를 무시하고 적용된다
+- 이는 span:nth-child(even) 의 우선순위가 p span보다 높기 때문으로, selector들 끼리는 고유의 우선순위 계산법에 의하여 적용된다 (같은 우선순위일 때만 cascading 적용됨)
+- [priority 계산하는 곳](https://specificity.keegan.st/)
