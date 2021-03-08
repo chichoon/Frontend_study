@@ -2,7 +2,7 @@ body {
   height: 1000vh;
   width: 100vw;
   /*vh는 현재 화면크기의 세로, vw는 현재 화면크기의 가로*/
-  margin: 20px;
+  margin: 100px;
   background-color: indigo;
 }
 
@@ -28,4 +28,11 @@ body {
   top: 50px;
 }
 
-.
+.divclass {
+  background-color: teal;
+  height: 200px;
+  width: 100px;
+  position: relative;
+  top: -30px;
+  right: -150px;
+}
