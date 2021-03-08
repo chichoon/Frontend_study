@@ -68,3 +68,8 @@ address {
   background-color: azure;
   position: fixed;
 }
+
+input:required {
+  border: 3px solid tomato;
+}
+/*required attribute를 갖고 있는 input만 색을 바꿔줌*/
