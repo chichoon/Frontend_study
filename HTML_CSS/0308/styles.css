@@ -1,0 +1,31 @@
+body {
+  height: 1000vh;
+  width: 100vw;
+  /*vh는 현재 화면크기의 세로, vw는 현재 화면크기의 가로*/
+  margin: 20px;
+  background-color: indigo;
+}
+
+#div1 {
+  width: 200px;
+  height: 200px;
+  background-color: white;
+}
+
+#div2 {
+  width: 400px;
+  height: 100px;
+  background-color: rgba(100, 100, 100, 0.5);
+  position: fixed;
+  top: 30px;
+}
+
+#div3 {
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  background-color: magenta;
+  top: 50px;
+}
+
+.
