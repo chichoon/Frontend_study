@@ -21,3 +21,51 @@ a:hover {
   background-color: aquamarine;
   color: azure;
 }
+
+img[src="img.png"] {
+  width: 200px;
+  height: 200px;
+  border: 5px solid white;
+  border-radius: 50%;
+  /*border-radius 50%는 이미지를 원형으로 만듬*/
+  transform: rotateZ(30deg) scale(2, 2);
+  transition: transform 1s ease-in-out;
+  /*Transition 적용*/
+}
+img[src="img.png"]:hover {
+  transform: rotateZ(100deg);
+}
+/*hover state로 변화할 때만 transititon 실행*/
+@keyframes coinFlip {
+  from {
+    transform: rotatey(0);
+  }
+  to {
+    transform: rotatey(360deg) translatex(100px);
+  }
+} /*애니메이션 정의하기*/
+img[src="img2.png"] {
+  width: 150px;
+  border: 5px solid white;
+  border-radius: 50%;
+  animation: coinFlip 2s ease-in-out infinite;
+  /*애니메이션 불러오기: transition과 비슷*/
+}
+
+@keyframes coinFlip2 {
+  0% {
+    transform: rotatey(0);
+  }
+  50% {
+    transform: rotatey(180deg) translatex(100px);
+  }
+  100% {
+    transform: rotatey(360deg) translatex(0px);
+  } /*from to의 두단계가 아닌 3단계로 나눌 수 있음*/
+}
+img[src="img3.png"] {
+  width: 150px;
+  border: 5px solid white;
+  border-radius: 50%;
+  animation: coinFlip2 2s ease-in-out infinite;
+}

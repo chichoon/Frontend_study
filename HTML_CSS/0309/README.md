@@ -48,14 +48,14 @@
 - transition 추가하는 법 : **transition: 변화시킬 속성 변화하는 시간**
   - 예시) transition: background-color 1s
 - 여러 속성 변화를 한번에 줄 수도 있다
-  - 예시) transition: background-color 1s color 5s
+  - 예시) transition: background-color 1s, color 5s
 - Transition은 **state를 기준**으로 변한다 (hover, active, ... 등)
   - state로 지정한 속성이 없으면 변화를 줄 수 없음
   - 예를 들어 state selector 내에 font-size가 없다면 font-size에 변화를 줄 수 없다는 것
 - 또한 Transition은 **state selector 내에 위치하면 안됨**
   - state selector가 아닌 기존 selector에 위치해야 함
   - index:hover가 아닌 index에
-- 모든 transition의 지속시간을 바꾸려면 **all 1s** 이런식으로
+- 모든 transition의 지속시간을 바꾸려면 **all 1s** 이런식으로 all을 사용
 - ease-in, ease-out, ease-in-out은 애니메이션이 어떻게 변화할지 알려주는 것
   - **linear**은 직선으로 변화함 (시간당 변화하는 양 같음)
   - **ease-in**은 처음에 느리게 변화했다가 급격해짐
@@ -64,6 +64,28 @@
   - 이런 것들은 변화하는 양의 프리셋이고, 자기만의 transition 설정은 시간 + cubic-bezier을 통해 곡선을 만들 수 있다
     - cubic-beizer(0, 0, 0, 0) (값은 0부터 1 사이)
     - ease-in, ease-out, ease-in-out이 제일 많이 쓰이긴함
+
+## Transformations
+
+- 한 요소를 변형시키는 데 쓰이는 것
+- 애니메이션이 보여진다기보단 이미지 등을 변형하는 속성
+  - 예를 들면 rotateY, rotateX 등은 3D 축에서 이미지를 변형시키기도 함
+- 이러한 변형은 형제 요소들 (box, inline 등)에 영향을 미치지 않음 (형제 요소들은 제자리에 가만히 있음)
+  - margin, padding과 아무런 관련이 없음
+  - 따라서 다른 요소들과 독립적으로 움직임, box 차원에서 움직이지 않음
+- transform도 다른 속성과 마찬가지로 transition 적용 가능함
+- 요즘 브라우저 성능이 너무 좋아져서 가능하게 된 것들
+
+## Animations
+
+- transition은 한 state부터 다른 state로 변화하는 것을 animate하지만, 이것은 state의 변화 시에만 볼 수 있다
+- Animation은 state의 변화에 구애받지 않음
+- 애니메이션 지정하는 법 : **@keyframes 애니메이션명**
+  1. from to 이용하기: from {이전모습} to {다음모습}
+  2. from to의 2단계 말고 여러 단계로 나누기:
+  - 0%, 20%, 50%, 100%등 진행정도에 따라서 분리
+- 애니메이션 불러오는 법 : **animation: 애니메이션명 지속시간 변화량** (transition과 비슷)
+  - 무한정으로 변화하게 하고 싶으면 맨 마지막에 infinite
 
 ## 팁
 
