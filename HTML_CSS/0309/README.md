@@ -39,6 +39,19 @@
   - 변수값에 또다른 변수를 넣을 수도 있음
 - 값을 사용할 땐 var(변수명) 으로 불러옴
 
+# Transition
+
+- 어떤 상태에서 다른 상태로의 변화를 보여주는 효과
+- (다른 상태로 변화할 때 애니메이션을 넣어주는 것)
+- transition을 추가할 땐 상태 (state) 가 없는 쪽에 속성을 붙여야 함
+  - a:hover가 아닌 a에 속성으로 넣어줘야 함!
+- transition 추가하는 법 : **transition: 변화시킬 속성 변화하는 시간**
+  - 예시) transition: background-color 1s
+- 여러 속성 변화를 한번에 줄 수도 있다
+  - 예시) transition: background-color 1s color 5s
+- Transition은 state를 기준으로 변한다 (hover, active, ... 등)
+  - state로 지정한 속성이 없으면 변화를 줄 수 없음
+
 ## 팁
 
 - default로 지정되어 있던 스타일을 임의로 하나라도 바꾸면 해당 스타일이 전부 날아감
