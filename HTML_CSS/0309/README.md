@@ -43,7 +43,7 @@
 
 - 어떤 상태에서 다른 상태로의 변화를 보여주는 효과
 - (다른 상태로 변화할 때 애니메이션을 넣어주는 것)
-- transition을 추가할 땐 상태 (state) 가 없는 쪽에 속성을 붙여야 함
+- transition을 추가할 땐 **상태 (state) 가 없는 쪽**에 속성을 붙여야 함
   - a:hover가 아닌 a에 속성으로 넣어줘야 함!
 - transition 추가하는 법 : **transition: 변화시킬 속성 변화하는 시간**
   - 예시) transition: background-color 1s
@@ -55,6 +55,15 @@
 - 또한 Transition은 **state selector 내에 위치하면 안됨**
   - state selector가 아닌 기존 selector에 위치해야 함
   - index:hover가 아닌 index에
+- 모든 transition의 지속시간을 바꾸려면 **all 1s** 이런식으로
+- ease-in, ease-out, ease-in-out은 애니메이션이 어떻게 변화할지 알려주는 것
+  - **linear**은 직선으로 변화함 (시간당 변화하는 양 같음)
+  - **ease-in**은 처음에 느리게 변화했다가 급격해짐
+  - **ease-out**은 처음에 빠르게 변화했다가 느려짐
+  - **ease-in-out**은 처음에 느리게 변화했다가, 빨라졌다가 다시 느려짐
+  - 이런 것들은 변화하는 양의 프리셋이고, 자기만의 transition 설정은 시간 + cubic-bezier을 통해 곡선을 만들 수 있다
+    - cubic-beizer(0, 0, 0, 0) (값은 0부터 1 사이)
+    - ease-in, ease-out, ease-in-out이 제일 많이 쓰이긴함
 
 ## 팁
 
