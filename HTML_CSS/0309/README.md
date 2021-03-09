@@ -49,8 +49,12 @@
   - 예시) transition: background-color 1s
 - 여러 속성 변화를 한번에 줄 수도 있다
   - 예시) transition: background-color 1s color 5s
-- Transition은 state를 기준으로 변한다 (hover, active, ... 등)
+- Transition은 **state를 기준**으로 변한다 (hover, active, ... 등)
   - state로 지정한 속성이 없으면 변화를 줄 수 없음
+  - 예를 들어 state selector 내에 font-size가 없다면 font-size에 변화를 줄 수 없다는 것
+- 또한 Transition은 **state selector 내에 위치하면 안됨**
+  - state selector가 아닌 기존 selector에 위치해야 함
+  - index:hover가 아닌 index에
 
 ## 팁
 
