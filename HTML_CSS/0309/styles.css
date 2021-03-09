@@ -57,10 +57,10 @@ img[src="img2.png"] {
     transform: rotatey(0);
   }
   50% {
-    transform: rotatey(180deg) translatex(100px);
+    transform: rotatey(180deg) translatey(-100px);
   }
   100% {
-    transform: rotatey(360deg) translatex(0px);
+    transform: rotatey(360deg) translatey(0px);
   } /*from to의 두단계가 아닌 3단계로 나눌 수 있음*/
 }
 img[src="img3.png"] {
@@ -68,4 +68,11 @@ img[src="img3.png"] {
   border: 5px solid white;
   border-radius: 50%;
   animation: coinFlip2 2s ease-in-out infinite;
+}
+body {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
 }
