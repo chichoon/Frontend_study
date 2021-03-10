@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@500;700&display=swap");
+/*최상단에서 폰트 불러오기*/
+
 .status-bar {
   display: flex;
   justify-content: space-between;
@@ -5,4 +8,8 @@
 
 .status-bar__column:first-child span {
   margin-right: 5px;
+}
+
+body {
+  font-family: "Saira Condensed", sans-serif;
 }

@@ -34,3 +34,13 @@
   ![icon_upload](readme_images/1.png)
   - 마찬가지로 들어가서 원하는 아이콘 선택 후 코드 복사하여 원하는 위치에 붙여넣으면 이미지가 나온다 (불러온 모습)
   - 태그의 i는 icon의 i임
+
+#### Font
+
+- **font-family** 속성은 폰트 뭉탱이
+  - 폰트명1, 폰트명2, 폰트명3, ... , 폰트명n; 이라는 구성
+  - 만약 폰트명1이 시스템에 없을 경우 폰트명2를 적용, 폰트명2도 없으면 폰트명3을 적용... 함
+- 폰트 구할 때 : [Google Fonts](https://fonts.google.com/)
+  - select this style -> **<link\>** 소스를 긁어서 html에 추가하거나, **@import** 소스를 긁어서 css에 추가할 수 있음 (css로 추가하는 것을 추천)
+  - 그리고 하단의 **CSS rules to specify families** 부분 font-family 코드를 복사하여 font-family 속성을 부여하면 됨
+  - 여러 옵션을 선택할 수 있는데 (light, bold 등..) 많이 선택할수록 불러올 때 오래걸릴 수 있음
