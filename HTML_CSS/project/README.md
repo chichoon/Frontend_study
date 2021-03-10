@@ -44,3 +44,19 @@
   - select this style -> **<link\>** 소스를 긁어서 html에 추가하거나, **@import** 소스를 긁어서 css에 추가할 수 있음 (css로 추가하는 것을 추천)
   - 그리고 하단의 **CSS rules to specify families** 부분 font-family 코드를 복사하여 font-family 속성을 부여하면 됨
   - 여러 옵션을 선택할 수 있는데 (light, bold 등..) 많이 선택할수록 불러올 때 오래걸릴 수 있음
+
+#### CSS hack
+
+- 컨테이너 하나를 박스 중심에 넣는 기술
+  - justify-content의 space-between은 같은 박스 안에 들어있는 다른 요소들의 너비가 서로 다를 때 요소가 정확하게 중앙에 오지 못한다
+- 정석적인 방법이 아니라 의아할 수 있지만 작동이 되는 약간 지름길같은 방식
+
+1. 부모 요소의 속성을 **justify-content: center**로 지정
+2. 모든 자식 요소에게 width: 33% 속성 부여
+3. 중앙에 두고 싶은 요소 (예시에서는 2번째 자식 요소) 의 **display: flex로, justify-content: center**로 지정
+4. 해당 요소 뒤에 있는 요소들 (예시에서는 3번째 자식 요소) 의 **display: flex로, justify-content: flex-end** 로 지정
+5. 마지막 요소의 아이콘을 재정렬하기 위해 **align-items: center** 설정
+6. 마지막 요소의 아이콘 사이에 공간을 주기 위해 아이콘들을 선택 후 (class 두개 한번에 고르면 됨: **.div클래스명 .아이콘클래스명**) margin: 5px 설정
+
+- fontawesome 아이콘 크기 크게 하는 방법
+  - i class="" 에 **fa-2x** 같은 특정한 태그 추가 (사이트 참고)
