@@ -31,8 +31,13 @@
     </header>
 
     <form action="friends.html" id="login-form" method="get">
-      <input type="text" placeholder="Email or Phone Number" />
-      <input type="Password" placeholder="Password" />
+      <input
+        name="username"
+        type="text"
+        placeholder="Email or Phone Number"
+        required
+      />
+      <input name="password" type="Password" placeholder="Password" required />
       <input type="submit" value="Log In" />
       <a href="#">Find kokoa account or password</a>
     </form>
