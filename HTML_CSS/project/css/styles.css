@@ -1,10 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@500;700&display=swap");
 /*최상단에서 폰트 불러오기*/
 @import "reset.css";
+@import "variables.css";
+
+/*components*/
 @import "components/status-bar.css";
-@import "variables.css"; /*다른 css 파일 불러오기*/
-@import "components/login.css";
+
+/* screens */
+@import "screens/login.css";
+
 /*각 디자인 별 css를 따로 분리해놓고 styles에서 불러오는 것이 깔끔하다*/
+
 body {
   font-family: "Saira Condensed", sans-serif;
 }
