@@ -1,0 +1,265 @@
+@import url("https://fonts.googleapis.com/css2?family=Glegoo:wght@400;700&display=swap");
+@import "reset.css";
+
+:root {
+  --color: #384ba3;
+  --stars: rgb(255, 166, 0);
+  --unstars: rgb(150, 150, 150);
+}
+
+body {
+  font-family: "Glegoo", serif;
+  width: 400px;
+  height: 950px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.header {
+  width: 440px;
+  height: 110px;
+  background-color: var(--color);
+  color: white;
+  margin-left: -20px;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  font-size: 30px;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+
+.header i {
+  width: 33%;
+  display: flex;
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.header i:nth-child(3) {
+  justify-content: flex-end;
+}
+
+.header__name {
+  width: 33%;
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.header__container {
+  position: absolute;
+  margin-top: 80px;
+}
+
+.header__search {
+  position: relative;
+}
+
+.header__search input {
+  width: 240px;
+  padding: 20px 30px;
+  font-size: 15px;
+  font-style: italic;
+  font-family: "Glegoo", serif;
+  border: none;
+  border-radius: 30px;
+}
+
+.header__container i {
+  color: rgba(0, 0, 0, 0.3);
+  font-size: 25px;
+  margin-top: -45px;
+  margin-left: 180px;
+  justify-content: flex-end;
+}
+
+.header__container i:hover {
+  color: rgba(0, 0, 0, 0.7);
+  cursor: pointer;
+}
+
+.album-of-the-day {
+  height: 280px;
+  margin-top: 150px;
+  padding-top: 10px;
+}
+.album-of-the-day__container {
+  display: flex;
+}
+
+.album-of-the-day h1 {
+  font-size: 25px;
+  font-weight: 700;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.album-of-the-day img {
+  object-fit: cover;
+  width: 150px;
+  height: 200px;
+  margin-top: 15px;
+  border-radius: 10px;
+}
+
+.album-of-the-day__description {
+  position: absolute;
+  margin-left: 170px;
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.album-of-the-day__title {
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.album-of-the-day__author {
+  margin-top: 15px;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.album-of-the-day__stars {
+  margin-top: 15px;
+  margin-bottom: 10px;
+  color: var(--stars);
+}
+
+.album-of-the-day__stars .fas:nth-child(5) {
+  color: var(--unstars);
+}
+
+.album-of-the-day__btn1 {
+  width: 100px;
+  padding: 8px 0px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(230, 230, 230);
+  font-family: "Glegoo", serif;
+}
+
+.album-of-the-day__btn1:hover {
+  background-color: rgb(200, 200, 200);
+  cursor: pointer;
+}
+
+.album-of-the-day__btn2 {
+  margin-top: 10px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  background-color: var(--color);
+  opacity: 70%;
+  color: white;
+}
+
+.album-of-the-day__btn2:hover {
+  opacity: 100%;
+  cursor: pointer;
+}
+
+.album-of-the-day__btn3 {
+  width: 120px;
+  height: 40px;
+  margin-left: 30px;
+  border: none;
+  border-radius: 5px;
+  background-color: black;
+  color: white;
+  font-family: "Glegoo", serif;
+}
+
+.album-of-the-day__btn3:hover {
+  opacity: 70%;
+  cursor: pointer;
+}
+
+body > h1 {
+  font-size: 25px;
+  font-weight: 700;
+  margin: 5px 0px 0px 0px;
+}
+
+body > h1:nth-child(5) {
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.featured-albums {
+  height: 170px;
+  padding-top: 10px;
+  display: flex;
+  overflow-x: scroll;
+  white-space: nowrap;
+}
+
+.featured-albums::-webkit-scrollbar {
+  height: 10px;
+}
+
+.featured-albums::-webkit-scrollbar-thumb {
+  background-color: var(--color);
+  border-radius: 5px;
+}
+
+.featured-albums__container {
+  margin-right: 10px;
+}
+
+.featured-albums img {
+  object-fit: cover;
+  width: 90px;
+  height: 120px;
+  margin-top: 10px;
+  border-radius: 10px;
+}
+
+.featured-albums img:hover {
+  cursor: pointer;
+}
+
+.featured-albums__stars {
+  font-size: 10px;
+  text-align: center;
+  color: var(--stars);
+}
+
+.featured-albums__stars i:nth-child(5) {
+  color: var(--unstars);
+}
+
+.featured-artist {
+  height: 160px;
+  display: flex;
+}
+
+.featured-artist img {
+  width: 150px;
+  height: 150px;
+  border-radius: 10px;
+}
+
+.featured-artist__description {
+  margin-left: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.featured-artist__title {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.featured-artist__desc {
+  font-size: 15px;
+  opacity: 70%;
+  line-height: 25px;
+}
