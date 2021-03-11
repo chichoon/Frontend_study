@@ -100,3 +100,7 @@
 #### navigation (nav)
 
 - 안에 list를 담으며, 다른 곳으로 넘어갈 수 있는 링크들이 list 형식으로 저장되어 있음
+
+#### box-sizing: border-box
+
+-
