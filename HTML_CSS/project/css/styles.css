@@ -58,4 +58,16 @@ body {
 #login-form input[type="submit"] {
   background-color: var(--yellow);
   cursor: pointer;
+  font-size: 15px;
+  padding: 20px 0px;
+  border-radius: 5px;
+}
+
+#login-form a {
+  text-align: center;
+  text-decoration: none;
+  /*링크 default 속성 (파란색 밑줄) 없애기*/
+  color: inherit;
+  /*부모요소로부터 속성 물려받기*/
+  font-size: 15px;
 }
