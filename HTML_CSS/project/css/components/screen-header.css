@@ -1,5 +1,10 @@
 .screen-header {
+  position: fixed;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: white;
   display: flex;
+  z-index: 99;
   justify-content: space-between;
   /*h1과 div 사이에 간격 부여*/
   align-items: center;
