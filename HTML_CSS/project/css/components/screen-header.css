@@ -1,0 +1,16 @@
+.screen-header {
+  display: flex;
+  justify-content: space-between;
+  /*h1과 div 사이에 간격 부여*/
+  align-items: center;
+  padding: 40px 20px 20px;
+}
+
+.screen-header__title {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.screen-header__icons span {
+  margin-left: 20px;
+}
