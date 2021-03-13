@@ -19,17 +19,7 @@
 }
 
 .nav__notif {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   position: absolute;
-  background-color: tomato;
-  color: white;
-  font-weight: 700;
-  z-index: 15;
-  width: 25px;
-  height: 25px;
-  border-radius: 50%;
   left: 20px;
   bottom: 20px;
 }
