@@ -15,4 +15,27 @@
 
 .nav__link {
   color: #2e363e;
+  position: relative;
+}
+
+.nav__notif {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  background-color: tomato;
+  color: white;
+  font-weight: 700;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  left: 20px;
+  bottom: 20px;
+}
+
+li:nth-child(4) .nav__notif {
+  width: 8px;
+  height: 8px;
+  left: 30px;
+  bottom: 28px;
 }
