@@ -3,7 +3,7 @@
   justify-content: space-between;
   /*h1과 div 사이에 간격 부여*/
   align-items: center;
-  padding: 60px 20px 25px 25px;
+  padding: 45px var(--horizontal-space) 15px var(--horizontal-space);
 }
 
 .screen-header__title {
