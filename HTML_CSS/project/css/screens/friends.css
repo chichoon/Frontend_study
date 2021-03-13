@@ -13,9 +13,24 @@
 }
 
 .friends-screen {
+  box-sizing: border-box;
+  height: 375px;
+  overflow-y: scroll;
   padding: 0px var(--horizontal-space);
   margin-top: 45px;
   margin-bottom: 80px;
+}
+
+.friends-screen::-webkit-scrollbar {
+  opacity: 0%;
+  width: 10px;
+}
+
+.friends-screen::-webkit-scrollbar-thumb {
+  background-color: var(--gray);
+  border-radius: 5px;
+  z-index: 0;
+  overflow-x: hidden;
 }
 
 .friends-screen__channel {
