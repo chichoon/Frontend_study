@@ -17,6 +17,10 @@
   margin-right: 20px;
 }
 
+.user-component__avatar:hover {
+  cursor: pointer;
+}
+
 .user-component__avatar--xl {
   width: 80px;
   height: 80px;
@@ -45,4 +49,25 @@
 
 .user-component__column:last-child {
   color: rgba(0, 0, 0, 0.3);
+}
+
+.user-component__music {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 2px solid lightgreen;
+  border-radius: 30px;
+  padding: 5px 15px;
+}
+
+.user-component__music-title {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  word-wrap: none;
+  margin-right: 10px;
+}
+
+.user-component__music i {
+  color: lightgreen;
 }
