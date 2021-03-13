@@ -49,6 +49,9 @@
 
 .user-component__column:last-child {
   color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 
 .user-component__music {
@@ -70,4 +73,11 @@
 
 .user-component__music i {
   color: lightgreen;
+}
+
+.user-component__time {
+  display: block;
+  margin-bottom: 8px;
+  opacity: 50%;
+  font-size: 18px;
 }
