@@ -1,0 +1,29 @@
+.find-screen {
+  box-sizing: border-box;
+  height: 430px;
+  padding: 0px var(--horizontal-space);
+  padding-top: -5px;
+  margin-bottom: 80px;
+  border: 1px solid black;
+}
+
+.find-icons {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid black;
+  margin: 20px 0px;
+}
+
+.find-icons__icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.find-icons__icon i {
+  font-size: 40px;
+}
+
+.find-icons__icon span {
+  margin-top: 15px;
+}
