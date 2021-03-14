@@ -10,3 +10,11 @@
   height: 25px;
   border-radius: 50%;
 }
+
+.badge__top {
+  display: block;
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  left: 65px;
+}
