@@ -8,7 +8,7 @@
 }
 
 #friends-display-link i {
-  color: rgba(0, 0, 0, 0.3);
+  color: var(--low-opacity);
   margin: 0px 5px;
 }
 
@@ -40,5 +40,5 @@
   margin-bottom: 5px;
   display: flex;
   justify-content: space-between;
-  color: rgba(0, 0, 0, 0.3);
+  color: var(--low-opacity);
 }
