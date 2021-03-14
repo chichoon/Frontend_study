@@ -32,7 +32,7 @@
 
 .friends-screen__channel {
   margin-top: 5px;
-  border-top: 1px solid rgba(0, 0, 0, 0.3);
+  border-top: var(--main-border);
   padding-top: 10px;
 }
 
