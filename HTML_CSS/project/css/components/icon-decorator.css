@@ -12,6 +12,25 @@
   position: absolute;
 }
 
+@keyframes starLight {
+  0% {
+    opacity: 1;
+    transform: none;
+  }
+  20% {
+    opacity: 0;
+    transform: rotatez(180deg);
+  }
+  40% {
+    opacity: 1;
+    transform: rotatez(360deg);
+  }
+  100% {
+    opacity: 1;
+    transform: rotatez(360deg);
+  }
+}
+
 .icon__star1 {
   bottom: 30px;
   left: 10px;
