@@ -5,9 +5,10 @@
 #chat-screen .alternative-header {
   box-sizing: border-box;
 }
+
 .chatting-screen {
   box-sizing: border-box;
-  height: 85%;
+  height: 65%;
   padding: 0px var(--horizontal-space);
   overflow-y: scroll;
   background: linear-gradient(
@@ -128,4 +129,71 @@
   font-size: 8px;
   bottom: -8px;
   left: 8px;
+}
+
+.reply {
+  background-color: orange;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 25px;
+  align-items: center;
+}
+
+.reply__column {
+  position: relative;
+}
+
+.reply__column:first-child {
+  width: 10%;
+}
+
+.reply__column:first-child i {
+  font-size: 30px;
+  color: white;
+}
+
+.reply__column:first-child i:hover {
+  cursor: pointer;
+}
+
+.reply__column:last-child {
+  width: 90%;
+}
+
+.reply__column:last-child > i,
+.reply__column:last-child button {
+  position: absolute;
+  top: 7px;
+}
+
+.reply__column:last-child > i:hover,
+.reply__column button:hover {
+  cursor: pointer;
+}
+
+.reply__column:last-child > i {
+  right: 8vw;
+}
+
+.reply__column:last-child button {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  top: 0px;
+  right: -12px;
+}
+
+.reply input {
+  box-sizing: border-box;
+  height: 30px;
+  width: 75vw;
+  border: var(--main-border);
+  border-radius: 20px;
+  padding-left: 15px;
+  padding-right: 30px;
 }
