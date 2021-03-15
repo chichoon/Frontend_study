@@ -16,9 +16,9 @@
   overflow-y: scroll;
   background: linear-gradient(
     to bottom,
-    rgb(0, 0, 0),
-    rgb(158, 57, 184),
-    orange
+    black,
+    rgb(41, 23, 56),
+    rgb(50, 85, 124)
   );
   display: flex;
   flex-direction: column;
@@ -139,7 +139,7 @@
 }
 
 .reply {
-  background-color: orange;
+  background-color: rgb(50, 85, 124);
   width: 100%;
   box-sizing: border-box;
   display: flex;
