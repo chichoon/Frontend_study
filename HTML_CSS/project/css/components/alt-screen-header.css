@@ -30,3 +30,7 @@
 .alt-header__column i:hover {
   cursor: pointer;
 }
+
+.alt-header__column i:nth-child(2) {
+  margin-left: 10px;
+}

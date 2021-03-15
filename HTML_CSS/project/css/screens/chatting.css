@@ -1,0 +1,13 @@
+#chat-screen {
+  background-color: rgb(230, 230, 230);
+}
+
+.chatting-screen {
+  box-sizing: border-box;
+  height: 73%;
+  padding: 0px var(--horizontal-space);
+  padding-top: -5px;
+  margin-bottom: 65px;
+  overflow-y: scroll;
+  background: linear-gradient(to bottom, rgb(230, 230, 230), rgb(97, 97, 97));
+}
