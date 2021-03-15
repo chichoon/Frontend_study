@@ -118,7 +118,7 @@
   border-top-left-radius: 0px;
   margin-right: 5px;
   max-width: 60vw;
-  word-break: break-all;
+  word-break: keep-all;
   position: relative;
 }
 
