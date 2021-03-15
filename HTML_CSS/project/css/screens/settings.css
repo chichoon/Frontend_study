@@ -1,9 +1,20 @@
 .settings-screen {
   box-sizing: border-box;
-  height: 80%;
+  height: 73%;
   padding: 0px var(--horizontal-space);
   padding-top: -5px;
   margin-bottom: 65px;
+  overflow-y: scroll;
+}
+
+.settings-screen::-webkit-scrollbar {
+  opacity: 0%;
+  width: 10px;
+}
+
+.settings-screen::-webkit-scrollbar-thumb {
+  background-color: var(--gray);
+  border-radius: 5px;
 }
 
 .settings__setting {

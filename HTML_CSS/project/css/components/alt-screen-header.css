@@ -26,3 +26,7 @@
   align-items: center;
   margin-left: auto;
 }
+
+.alt-header__column i:hover {
+  cursor: pointer;
+}
