@@ -25,6 +25,7 @@
 
 .icon-row__icon i {
   font-size: 30px;
+  filter: drop-shadow(0 0 0.3rem rgba(255, 255, 255, 0.4));
 }
 
 .icon-row__icon img {
@@ -32,10 +33,12 @@
   height: 50px;
   border-radius: 10px;
   border: 2px solid white;
+  filter: drop-shadow(0 0 0.3rem rgba(255, 255, 255, 0.6));
 }
 
 .icon-row__icon span {
   margin-top: 15px;
+  filter: drop-shadow(0 0 0.3rem rgba(255, 255, 255, 0.4));
 }
 
 .opacity--0 {

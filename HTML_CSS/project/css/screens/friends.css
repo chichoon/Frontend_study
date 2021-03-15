@@ -64,5 +64,49 @@
   top: 0;
   z-index: 100;
   animation: hideSplashScreen 1s ease-in-out forwards;
-  animation-delay: 0.5s;
+  animation-delay: 2s;
+}
+
+@keyframes starShine {
+  from {
+    opacity: 0;
+    transform: none;
+  }
+  to {
+    opacity: 1;
+    transform: rotatez(360deg);
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+#splash-screen i {
+  opacity: 0;
+}
+
+#splash-screen span {
+  opacity: 0;
+}
+
+#splash-screen .icon__star1 {
+  animation: starShine 1s ease-in-out forwards;
+}
+#splash-screen .icon__star2 {
+  animation: starShine 1s ease-in-out forwards;
+  animation-delay: 0.3s;
+}
+#splash-screen .icon__star3 {
+  animation: starShine 1s ease-in-out forwards;
+  animation-delay: 0.6s;
+}
+#splash-screen span {
+  animation: fade 1s ease-in-out forwards;
+  animation-delay: 1s;
 }

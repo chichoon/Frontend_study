@@ -41,6 +41,8 @@
   border-radius: 20px;
   margin-right: 20px;
   border: 2px solid white;
+  background-color: white;
+  filter: drop-shadow(0 0 0.3rem rgba(255, 255, 255, 0.4));
 }
 
 .user-component__avatar--xl {
@@ -61,6 +63,7 @@
   overflow: hidden;
   white-space: nowrap;
   word-wrap: none;
+  filter: drop-shadow(0 0 0.5rem rgba(255, 255, 255, 0.3));
 }
 
 .user-component__name--not-bold {
@@ -77,6 +80,7 @@
   overflow: hidden;
   white-space: nowrap;
   word-wrap: none;
+  filter: drop-shadow(0 0 0.3rem rgba(255, 255, 255, 0.3));
 }
 
 .user-component__music {
@@ -87,6 +91,7 @@
   border: 2px solid lightgreen;
   border-radius: 30px;
   padding: 5px 15px;
+  filter: drop-shadow(0 0 0.3rem rgba(144, 238, 144, 0.5));
 }
 
 .user-component__music-title {
@@ -95,6 +100,7 @@
   white-space: nowrap;
   word-wrap: none;
   margin-right: 10px;
+  filter: drop-shadow(0 0 0.3rem rgba(255, 255, 255, 0.3));
 }
 
 .user-component__music i {
@@ -106,4 +112,5 @@
   margin-bottom: 8px;
   color: var(--low-opacity);
   font-size: 18px;
+  filter: drop-shadow(0 0 0.3rem rgba(255, 255, 255, 0.3));
 }

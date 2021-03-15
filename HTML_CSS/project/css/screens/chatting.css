@@ -59,6 +59,7 @@
   border-radius: 30px;
   margin-top: 5px;
   margin-bottom: 25px;
+  filter: drop-shadow(0 0 0.3rem rgba(255, 255, 255, 0.3));
 }
 
 .message-row {
@@ -73,6 +74,8 @@
   border: 2px solid white;
   border-radius: 10px;
   margin-right: 10px;
+  background-color: white;
+  filter: drop-shadow(0 0 0.3rem rgba(255, 255, 255, 0.5));
 }
 
 .message-row > img:hover {
@@ -136,6 +139,7 @@
   margin-right: 5px;
   max-width: 60vw;
   word-break: keep-all;
+  filter: drop-shadow(0 0 0.3rem rgba(255, 255, 255, 0.3));
   position: relative;
 }
 
@@ -146,6 +150,7 @@
 .message__time {
   color: rgba(255, 255, 255, 0.7);
   font-size: 13px;
+  filter: drop-shadow(0 0 0.3rem rgba(255, 255, 255, 0.3));
 }
 
 .message-row--own {
