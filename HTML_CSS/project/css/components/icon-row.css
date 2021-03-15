@@ -1,7 +1,7 @@
 .icon-row {
   display: flex;
   justify-content: space-between;
-  margin: 15px 15px;
+  margin: 20px 15px;
 }
 
 .icon-row__icon {
@@ -18,6 +18,20 @@
   font-size: 30px;
 }
 
+.icon-row__icon img {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+}
+
 .icon-row__icon span {
   margin-top: 15px;
+}
+
+.opacity--0 {
+  opacity: 0%;
+}
+
+.opacity--0:hover {
+  cursor: default;
 }

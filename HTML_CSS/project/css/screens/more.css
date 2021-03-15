@@ -4,11 +4,23 @@
   padding: 0px var(--horizontal-space);
   padding-top: -5px;
   margin-bottom: 65px;
-  border: 2px solid black;
 }
 
 h5 i {
   margin-left: 5px;
   font-size: 17px;
   color: rgba(212, 71, 71, 0.7);
+}
+
+.more-suggestions {
+  margin-top: 40px;
+  border-top: var(--main-border);
+}
+
+.more-suggestions__title {
+  font-size: 18px;
+  display: flex;
+  justify-content: space-between;
+  color: var(--gray);
+  margin: 5px 0px 15px 0px;
 }

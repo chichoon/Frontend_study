@@ -2,6 +2,10 @@
   justify-content: space-between;
 }
 
+.user-component:hover {
+  cursor: pointer;
+}
+
 .user-component,
 .user-component__column:first-child {
   box-sizing: border-box;
