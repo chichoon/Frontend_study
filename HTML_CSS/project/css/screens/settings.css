@@ -8,10 +8,34 @@
 
 .settings__setting {
   padding: 20px 0;
-  border-bottom: var(--main-border);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.settings__setting i {
+.settings__setting:hover {
+  cursor: pointer;
+}
+
+.settings__setting-column {
+  display: flex;
+  align-items: center;
+}
+
+.settings__setting-column i {
   margin-right: 10px;
+  font-size: 22px;
+}
+
+.settings__setting-column:last-child {
+  color: var(--low-opacity);
+}
+
+.settings__setting-column:first-child .badge {
+  width: 20px;
+  height: 20px;
+  font-size: 15px;
+  margin-left: 5px;
 }
