@@ -1,19 +1,21 @@
 #chat-screen {
-  background-color: rgb(230, 230, 230);
+  background-color: rgb(0, 0, 0);
 }
 
 #chat-screen .alternative-header {
   box-sizing: border-box;
 }
-
 .chatting-screen {
   box-sizing: border-box;
   height: 85%;
   padding: 0px var(--horizontal-space);
   overflow-y: scroll;
-  background: linear-gradient(to bottom, rgb(230, 230, 230), rgb(97, 97, 97));
-  border: 2px solid black;
-
+  background: linear-gradient(
+    to bottom,
+    rgb(0, 0, 0),
+    rgb(158, 57, 184),
+    orange
+  );
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -30,7 +32,7 @@
 }
 
 .chat__timestamp {
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(255, 255, 255, 0.3);
   color: white;
   font-size: 15px;
   text-align: center;
@@ -46,7 +48,7 @@
   margin-bottom: 15px;
 }
 
-.message-row img {
+.message-row > img {
   width: 40px;
   height: 40px;
   background-color: white;
@@ -55,7 +57,7 @@
 }
 
 .message__author {
-  opacity: 0.8;
+  color: rgba(255, 255, 255, 0.7);
   font-size: 13px;
   margin-bottom: 5px;
 }
@@ -66,7 +68,9 @@
 }
 
 .message__bubble {
-  background-color: white;
+  background-color: black;
+  color: white;
+  border: 1px solid white;
   padding: 10px;
   font-size: 15px;
   border-radius: 10px;
@@ -74,9 +78,56 @@
   margin-right: 5px;
   max-width: 70vw;
   word-break: break-all;
+  position: relative;
+}
+
+.message__bubble img {
+  max-width: 70vw;
 }
 
 .message__time {
-  opacity: 0.8;
+  color: rgba(255, 255, 255, 0.7);
   font-size: 13px;
+}
+
+.message-row--own {
+  justify-content: flex-end;
+}
+
+.message-row--own .message__time {
+  justify-content: flex-end;
+  order: 0;
+}
+
+.message-row--own .message__bubble {
+  background-color: black;
+  border: 2px solid white;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 0;
+  margin-right: 0;
+  margin-left: 5px;
+  order: 1;
+}
+
+.message__bubble .bubble__star {
+  position: absolute;
+  color: white;
+  font-size: 13px;
+  bottom: -5px;
+  right: -5px;
+}
+
+.message-row--own .message__bubble .bubble__star1 {
+  position: absolute;
+  color: white;
+  font-size: 13px;
+  bottom: -5px;
+  left: -5px;
+}
+.message-row--own .message__bubble .bubble__star2 {
+  position: absolute;
+  color: white;
+  font-size: 8px;
+  bottom: -8px;
+  left: 8px;
 }
