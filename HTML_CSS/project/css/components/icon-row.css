@@ -12,6 +12,15 @@
 
 .icon-row__icon:hover {
   cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.icon-row__icon:not(:hover) {
+  background-color: transparent;
+  border-radius: 10px;
+  transition: background-color 0.3s ease-in-out;
 }
 
 .icon-row__icon i {
