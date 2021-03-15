@@ -75,6 +75,24 @@
   align-items: flex-end;
 }
 
+@keyframes hoverBubble {
+  0% {
+    transform: 0;
+  }
+  50% {
+    transform: rotatey(360deg);
+  }
+  100% {
+    transform: 0;
+  }
+}
+
+.message__bubble:hover .bubble__star,
+.message__bubble:hover .bubble__star1,
+.message__bubble:hover .bubble__star2 {
+  animation: hoverBubble 1s linear infinite;
+}
+
 .message__bubble {
   background-color: black;
   color: white;
