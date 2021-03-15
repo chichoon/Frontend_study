@@ -37,4 +37,46 @@
   padding: 5px 10px;
   border-radius: 30px;
   margin-top: 5px;
+  margin-bottom: 25px;
+}
+
+.message-row {
+  width: 100%;
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.message-row img {
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  border-radius: 10px;
+  margin-right: 10px;
+}
+
+.message__author {
+  opacity: 0.8;
+  font-size: 13px;
+  margin-bottom: 5px;
+}
+
+.message__info {
+  display: flex;
+  align-items: flex-end;
+}
+
+.message__bubble {
+  background-color: white;
+  padding: 10px;
+  font-size: 15px;
+  border-radius: 10px;
+  border-top-left-radius: 0px;
+  margin-right: 5px;
+  max-width: 70vw;
+  word-break: break-all;
+}
+
+.message__time {
+  opacity: 0.8;
+  font-size: 13px;
 }

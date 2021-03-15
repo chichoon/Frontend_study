@@ -1,7 +1,7 @@
 .icon-row {
   display: flex;
   justify-content: space-between;
-  margin: 20px 15px;
+  margin: 15px;
 }
 
 .icon-row__icon {
