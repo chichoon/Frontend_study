@@ -1,3 +1,28 @@
 .alternative-header {
-  padding-top: 40px;
+  padding: 40px var(--horizontal-space) 15px var(--horizontal-space);
+  display: flex;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+}
+
+.alt-header__title {
+  font-size: 30px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.alt-header__column {
+  width: 33%;
+}
+
+.alt-header__column:first-child {
+  margin-right: auto;
+}
+
+.alt-header__column:last-child {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-left: auto;
 }
