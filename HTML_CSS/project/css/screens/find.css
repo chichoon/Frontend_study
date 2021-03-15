@@ -1,9 +1,20 @@
 .find-screen {
   box-sizing: border-box;
-  height: 80%;
+  width: 100vw;
+  height: 100vh;
+  overflow-y: scroll;
   padding: 0px var(--horizontal-space);
   padding-top: -5px;
-  margin-bottom: 65px;
+}
+
+.find-screen::-webkit-scrollbar {
+  opacity: 0%;
+  width: 10px;
+}
+
+.find-screen::-webkit-scrollbar-thumb {
+  background-color: var(--gray);
+  border-radius: 5px;
 }
 
 .recommended-friends {
@@ -60,6 +71,10 @@
   margin-bottom: 5px;
 }
 
+.open-post:hover {
+  cursor: pointer;
+}
+
 .open-post__title {
   font-weight: 600;
   margin-bottom: 5px;
@@ -71,6 +86,11 @@
   text-transform: uppercase;
   opacity: 70%;
   font-size: 15px;
+  max-width: 50vw;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  word-wrap: none;
 }
 
 .open-post__members {
@@ -105,21 +125,19 @@
   position: relative;
 }
 
-.open-post__photo:hover {
-  cursor: pointer;
-}
-
 .open-post__photo img {
+  box-sizing: border-box;
   width: 80px;
   height: 80px;
   border-radius: 10px;
+  border: 2px solid white;
 }
 
 .open-post__heart-count {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--low-opacity);
+  background-color: rgba(0, 0, 0, 0.3);
   color: white;
   padding: 5px 7px;
   border-radius: 20px;

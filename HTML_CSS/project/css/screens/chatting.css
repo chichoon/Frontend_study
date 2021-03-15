@@ -1,5 +1,7 @@
 #chat-screen {
   background-color: rgb(0, 0, 0);
+  display: flex;
+  flex-direction: column;
 }
 
 #chat-screen .alternative-header {
@@ -8,7 +10,8 @@
 
 .chatting-screen {
   box-sizing: border-box;
-  height: 65%;
+  width: 100vw;
+  height: 95%;
   padding: 0px var(--horizontal-space);
   overflow-y: scroll;
   background: linear-gradient(
@@ -52,9 +55,13 @@
 .message-row > img {
   width: 40px;
   height: 40px;
-  background-color: white;
+  border: 2px solid white;
   border-radius: 10px;
   margin-right: 10px;
+}
+
+.message-row > img:hover {
+  cursor: pointer;
 }
 
 .message__author {
@@ -77,13 +84,13 @@
   border-radius: 10px;
   border-top-left-radius: 0px;
   margin-right: 5px;
-  max-width: 70vw;
+  max-width: 60vw;
   word-break: break-all;
   position: relative;
 }
 
 .message__bubble img {
-  max-width: 70vw;
+  max-width: 60vw;
 }
 
 .message__time {
@@ -139,6 +146,7 @@
   justify-content: space-between;
   padding: 5px 25px;
   align-items: center;
+  flex: 1;
 }
 
 .reply__column {

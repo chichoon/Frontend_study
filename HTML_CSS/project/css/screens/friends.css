@@ -2,7 +2,7 @@
   display: block;
   width: 100%;
   text-align: center;
-  background-color: #f0f0f0;
+  background-color: rgba(250, 250, 250, 0.4);
   padding: 10px 0px;
   font-size: 15px;
 }
@@ -14,10 +14,10 @@
 
 .friends-screen {
   box-sizing: border-box;
-  height: 68%;
+  width: 100vw;
+  height: 100vh;
   overflow-y: scroll;
   padding: 0px var(--horizontal-space);
-  margin-bottom: 80px;
 }
 
 .friends-screen::-webkit-scrollbar {

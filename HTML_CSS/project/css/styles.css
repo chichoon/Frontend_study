@@ -27,5 +27,8 @@
 body {
   font-family: "Saira Condensed", sans-serif;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(to bottom, black, rgb(52, 81, 124));
   color: var(--gray);
 }

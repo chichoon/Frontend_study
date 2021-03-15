@@ -1,9 +1,8 @@
 .settings-screen {
   box-sizing: border-box;
-  height: 73%;
+  height: 100%;
   padding: 0px var(--horizontal-space);
   padding-top: -5px;
-  margin-bottom: 65px;
   overflow-y: scroll;
 }
 

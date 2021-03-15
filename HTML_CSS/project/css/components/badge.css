@@ -2,8 +2,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: tomato;
-  color: white;
+  background-color: rgb(190, 247, 255);
+  color: rgb(22, 57, 73);
   font-weight: 700;
   z-index: 15;
   width: 25px;
