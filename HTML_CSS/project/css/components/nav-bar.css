@@ -6,6 +6,7 @@
   background-color: rgb(52, 81, 124);
   padding: 20px 50px;
   border-top: var(--main-border);
+  overflow-y: hidden;
 }
 
 .nav__list {

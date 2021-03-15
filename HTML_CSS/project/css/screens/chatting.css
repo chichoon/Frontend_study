@@ -1,7 +1,11 @@
 #chat-screen {
-  background-color: rgb(0, 0, 0);
-  display: flex;
-  flex-direction: column;
+  background: linear-gradient(
+    to bottom,
+    black,
+    rgb(41, 23, 56),
+    rgb(50, 85, 124)
+  );
+  overflow-y: hidden;
 }
 
 #chat-screen .alternative-header {
@@ -14,16 +18,8 @@
   height: 95%;
   padding: 0px var(--horizontal-space);
   overflow-y: scroll;
-  background: linear-gradient(
-    to bottom,
-    black,
-    rgb(41, 23, 56),
-    rgb(50, 85, 124)
-  );
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
+
 @keyframes fadeIn {
   from {
     transform: translateY(-30px);
@@ -36,7 +32,11 @@
 }
 
 #main-chat {
+  width: 100%;
   animation: fadeIn 0.5s linear;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .chatting-screen::-webkit-scrollbar {
@@ -52,6 +52,7 @@
 .chat__timestamp {
   background-color: rgba(255, 255, 255, 0.3);
   color: white;
+  width: fit-content;
   font-size: 15px;
   text-align: center;
   padding: 5px 10px;
@@ -171,7 +172,7 @@
 }
 
 .reply {
-  background-color: rgb(50, 85, 124);
+  background-color: transparent;
   width: 100%;
   box-sizing: border-box;
   display: flex;
@@ -237,6 +238,12 @@
   border-radius: 20px;
   padding-left: 15px;
   padding-right: 30px;
+}
+
+.reply .reply__column:first-child,
+.reply .fa-smile-wink,
+.reply button {
+  transition: opacity 0.3s ease-in-out;
 }
 
 .reply:focus-within .reply__column:first-child,
