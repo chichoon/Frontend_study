@@ -12,11 +12,13 @@
   margin-bottom: 20px;
   font-size: 25px;
   font-weight: 600;
+  filter: drop-shadow(0 0 0.5rem rgba(255, 255, 255, 0.5));
 }
 
 .welcome-header__text {
   width: 60%;
   opacity: 0.6;
+  filter: drop-shadow(0 0 0.3rem rgba(255, 255, 255, 0.5));
 }
 
 #login-form {
@@ -31,6 +33,7 @@
   border: none;
   font-size: 15px;
   margin-bottom: 20px;
+  filter: drop-shadow(0 0 0.3rem rgba(255, 255, 255, 0.5));
 }
 
 #login-form input:not([type="submit"]) {
@@ -64,4 +67,5 @@
   color: inherit;
   /*부모요소로부터 속성 물려받기*/
   font-size: 15px;
+  filter: drop-shadow(0 0 0.3rem rgba(255, 255, 255, 0.5));
 }
