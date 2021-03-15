@@ -17,6 +17,7 @@
 
 .screen-header__icons {
   position: relative;
+  box-sizing: border-box;
 }
 
 .screen-header__icons span {
