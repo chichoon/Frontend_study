@@ -94,11 +94,6 @@
   justify-content: flex-end;
 }
 
-.message-row--own .message__time {
-  justify-content: flex-end;
-  order: 0;
-}
-
 .message-row--own .message__bubble {
   background-color: black;
   border: 2px solid white;
@@ -106,7 +101,10 @@
   border-top-right-radius: 0;
   margin-right: 0;
   margin-left: 5px;
-  order: 1;
+}
+
+.message-row--own .message__info {
+  flex-direction: row-reverse;
 }
 
 .message__bubble .bubble__star {
