@@ -25,6 +25,6 @@
 /*각 디자인 별 css를 따로 분리해놓고 styles에서 불러오는 것이 깔끔하다*/
 body {
   font-family: "Saira Condensed", sans-serif;
-  height: auto;
+  height: 100vh;
   color: var(--gray);
 }

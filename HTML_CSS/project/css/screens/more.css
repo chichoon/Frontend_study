@@ -1,6 +1,6 @@
 .more-screen {
   box-sizing: border-box;
-  height: 430px;
+  height: 80%;
   padding: 0px var(--horizontal-space);
   padding-top: -5px;
   margin-bottom: 65px;

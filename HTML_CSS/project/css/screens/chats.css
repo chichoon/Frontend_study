@@ -1,6 +1,6 @@
 .chats-screen {
   box-sizing: border-box;
-  height: 435px;
+  height: 73%;
   overflow-y: scroll;
   padding: 0px var(--horizontal-space);
   padding-top: -5px;

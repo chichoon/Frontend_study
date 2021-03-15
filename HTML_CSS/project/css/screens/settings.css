@@ -1,0 +1,17 @@
+.settings-screen {
+  box-sizing: border-box;
+  height: 80%;
+  padding: 0px var(--horizontal-space);
+  padding-top: -5px;
+  margin-bottom: 65px;
+}
+
+.settings__setting {
+  padding: 20px 0;
+  border-bottom: var(--main-border);
+  font-size: 18px;
+}
+
+.settings__setting i {
+  margin-right: 10px;
+}

@@ -14,7 +14,7 @@
 
 .friends-screen {
   box-sizing: border-box;
-  height: 400px;
+  height: 68%;
   overflow-y: scroll;
   padding: 0px var(--horizontal-space);
   margin-bottom: 80px;
