@@ -6,30 +6,6 @@
   margin-bottom: 65px;
 }
 
-.find-icons {
-  display: flex;
-  justify-content: space-between;
-  margin: 15px 15px;
-}
-
-.find-icons__icon {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.find-icons__icon:hover {
-  cursor: pointer;
-}
-
-.find-icons__icon i {
-  font-size: 30px;
-}
-
-.find-icons__icon span {
-  margin-top: 15px;
-}
-
 .recommended-friends {
   display: flex;
   flex-direction: column;
