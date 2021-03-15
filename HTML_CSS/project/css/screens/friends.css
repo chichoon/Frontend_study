@@ -43,13 +43,26 @@
   color: var(--low-opacity);
 }
 
+@keyframes hideSplashScreen {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
 #splash-screen {
   width: 100vw;
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: ;
+  background: linear-gradient(to bottom, black, rgb(52, 81, 124));
   position: absolute;
+  top: 0;
   z-index: 100;
+  animation: hideSplashScreen 1s ease-in-out forwards;
+  animation-delay: 0.5s;
 }

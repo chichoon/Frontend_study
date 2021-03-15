@@ -8,6 +8,7 @@
 }
 
 .welcome-header__title {
+  margin-top: 20px;
   margin-bottom: 20px;
   font-size: 25px;
   font-weight: 600;
@@ -33,20 +34,23 @@
 }
 
 #login-form input:not([type="submit"]) {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  padding-left: 10px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   transition: border-color 0.3s ease-in-out;
 }
 
 #login-form input::placeholder {
-  color: rgba(0, 0, 0, 0.3);
+  color: rgba(255, 255, 255, 0.6);
 }
 
 #login-form input:focus {
-  border-color: var(--yellow);
+  border-color: var(--gray);
 }
 
 #login-form input[type="submit"] {
-  background-color: var(--yellow);
+  background-color: var(--gray);
   cursor: pointer;
   font-size: 15px;
   padding: 20px 0px;

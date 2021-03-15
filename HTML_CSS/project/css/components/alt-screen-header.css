@@ -1,5 +1,5 @@
 .alternative-header {
-  padding: 40px var(--horizontal-space) 15px var(--horizontal-space);
+  padding: 15px var(--horizontal-space);
   display: flex;
   box-sizing: border-box;
   justify-content: center;
