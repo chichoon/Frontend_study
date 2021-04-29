@@ -2,7 +2,7 @@
 
 ### What this study uses
 
-HTML5, CSS, JS, React
+HTML5, CSS, JS
 
 ### Study Goal
 
