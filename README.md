@@ -6,7 +6,7 @@ HTML5, CSS, JS
 
 ### Study Goal
 
-To establish personal web page
+프론트엔드 관련 수업 완강하기... (언제쯤)
 
 ## Stages
 
