@@ -10,9 +10,6 @@ HTML5, CSS, JS
 
 ## Stages
 
-- [x] ~ 0130
-  - first use of HTML5 and CSS3
-  - apply css style to html5
 - [x] 0208 ~ 0220
   - Nomad code VanillaJS Challenge
   - **not uploading challenge assignments code!**
