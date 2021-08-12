@@ -12,7 +12,5 @@ HTML5, CSS, JS
 
 - [x] 0208 ~ 0220
   - Nomad code VanillaJS Challenge
-  - **not uploading challenge assignments code!**
 - [x] 0301 ~ 0314
   - Nomad code HTML / CSS Challenge
-  - **not uploading challenge assignments code!**
